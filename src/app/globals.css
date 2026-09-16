@@ -158,6 +158,36 @@ body {
   background: var(--accent);
 }
 
+/* ── Hero, phone ───────────────────────────────────────────────────── */
+
+/* White type over a dark ramp needs far less coverage than ink type over a
+   white one: ink wants ~85% white behind it on this pale footage, which hides
+   the building. Strong through the bottom third where the beat copy and CTAs
+   sit, gone by two-thirds up so the film reads clean. */
+.hero-scrim-mobile {
+  background-image: linear-gradient(
+    to top,
+    rgba(17, 17, 16, 0.92) 0%,
+    rgba(17, 17, 16, 0.82) 30%,
+    rgba(17, 17, 16, 0.5) 44%,
+    rgba(17, 17, 16, 0) 66%
+  );
+}
+
+/* A soft shadow buys the last of the legibility without more coverage. */
+.hero-shadow {
+  text-shadow: 0 1px 2px rgba(17, 17, 16, 0.45), 0 2px 24px rgba(17, 17, 16, 0.55);
+}
+
+@media (min-width: 1024px) {
+  /* Desktop runs ink on a light wash instead — none of this applies. */
+  .hero-scrim-mobile { background-image: none; }
+  .hero-shadow { text-shadow: none; }
+  /* Desktop has room for the masthead the whole way down; only phones drop it
+     once the film starts. !important because motion writes opacity inline. */
+  .hero-masthead { opacity: 1 !important; }
+}
+
 /* ── Motion ────────────────────────────────────────────────────────── */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(20px); }

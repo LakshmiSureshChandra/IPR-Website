@@ -2,7 +2,8 @@
 # Turn the hero video into the numbered frame sequence the scroll hero scrubs.
 #
 #   ./scripts/hero-frames.sh media/hero/hero.mp4
-#   ./scripts/hero-frames.sh media/hero/hero.mp4 140 1920
+#   ./scripts/hero-frames.sh media/hero/hero.mp4 320 1440
+#   ./scripts/hero-frames.sh media/hero/hero.mp4 320 1024 public/images/hero-sm
 #
 # Scroll-scrubbing a real <video> by setting currentTime is unreliable on iOS
 # Safari and stutters on Android, so we scrub a canvas over pre-decoded frames
@@ -12,7 +13,7 @@ set -euo pipefail
 SRC="${1:-media/hero/hero.mp4}"
 COUNT="${2:-120}"
 WIDTH="${3:-1600}"
-OUT="public/images/hero"
+OUT="${4:-public/images/hero}"
 
 command -v ffmpeg >/dev/null || { echo "ffmpeg not found (brew install ffmpeg)" >&2; exit 1; }
 [ -f "$SRC" ] || { echo "no such video: $SRC" >&2; exit 1; }
@@ -33,3 +34,4 @@ ffmpeg -v error -i "$SRC" \
 ACTUAL=$(find "$OUT" -name 'frame_*.webp' | wc -l | tr -d ' ')
 echo "$ACTUAL frames → $OUT ($(du -sh "$OUT" | cut -f1))"
 echo "Set HERO_FRAME_COUNT in src/lib/media.ts to $ACTUAL"
+echo "(phones load the -sm set; regenerate both when the film changes)"
