@@ -188,6 +188,48 @@ body {
   .hero-masthead { opacity: 1 !important; }
 }
 
+/* ── Intro wipe ────────────────────────────────────────────────────── */
+
+/* Driven by CSS, not JS. The entrance used motion with delays that could only
+   start once React had hydrated, so on a refresh the screen sat blank until
+   then — and the old delays ran so late that the coordinate line finished
+   arriving at 1.50s, the exact moment the whole group began fading out.
+   CSS animations start at first paint, so the sequence is the same every
+   refresh regardless of how long the bundle takes. */
+
+@keyframes intro-rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes intro-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes intro-sweep {
+  0%   { transform: scaleX(0); opacity: 0; }
+  14%  { opacity: 1; }
+  72%  { opacity: 1; }
+  100% { transform: scaleX(1); opacity: 0; }
+}
+@keyframes intro-out { to { opacity: 0; } }
+@keyframes intro-panel-up { to { transform: translateY(-100%); } }
+@keyframes intro-panel-down { to { transform: translateY(100%); } }
+
+/* Everything lands by 0.85s, holds for half a second, then leaves at 1.35s. */
+.intro-sweep {
+  background: linear-gradient(90deg, transparent, var(--accent) 45%, var(--accent) 55%, transparent);
+  transform-origin: left center;
+  animation: intro-sweep 0.9s ease-in-out 0.05s both;
+}
+.intro-logo  { animation: intro-rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both; }
+.intro-word  { animation: intro-fade 0.4s ease-out 0.28s both; }
+.intro-coord { animation: intro-fade 0.4s ease-out 0.44s both; }
+
+.intro-content    { animation: intro-out 0.3s ease-in 1.35s both; }
+.intro-panel-up   { animation: intro-panel-up 0.75s cubic-bezier(0.76, 0, 0.24, 1) 1.35s both; }
+.intro-panel-down { animation: intro-panel-down 0.75s cubic-bezier(0.76, 0, 0.24, 1) 1.35s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-root { display: none; }
+}
+
 /* ── Motion ────────────────────────────────────────────────────────── */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(20px); }
