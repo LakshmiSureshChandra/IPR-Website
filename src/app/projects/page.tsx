@@ -45,7 +45,7 @@ export default function ProjectsPage() {
           <p className="eyebrow mb-6 text-accent-ink">Portfolio</p>
           <SplitText as="h1" text="Signature Projects" className="display-wide" style={{ fontSize: "clamp(1.9rem, 4.4vw, 3.4rem)" }} />
           <p className="mt-7 max-w-xl text-base leading-[1.85] text-muted-foreground">
-            150+ projects delivered across Hyderabad — from intimate apartments to sprawling villas and commercial
+            50+ projects delivered across Hyderabad — from intimate apartments to sprawling villas and commercial
             landmarks.
           </p>
         </div>

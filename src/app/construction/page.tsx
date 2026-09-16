@@ -36,7 +36,7 @@ export default function ConstructionPage() {
         { title: "Fixed-Cost Contracts", desc: "Transparent itemised BOQ with no hidden escalations. Milestone-based payment schedule." },
         { title: "In-House Teams", desc: "Our own civil engineers and site supervisors — not outsourced labour — on site every day." },
         { title: "Quality Materials", desc: "Grade-A structural materials, vetted suppliers, and third-party quality inspections at key stages." },
-        { title: "On-Time Track Record", desc: "95%+ on-time delivery rate across 150+ projects. Penalty clauses available in contract." },
+        { title: "On-Time Track Record", desc: "95%+ on-time delivery rate across 50+ projects. Penalty clauses available in contract." },
         { title: "Progress Reporting", desc: "Weekly photo reports, milestone sign-offs, and dedicated WhatsApp project channels." },
       ]}
       gallery={[

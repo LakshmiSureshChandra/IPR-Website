@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export const metadata: Metadata = {
   title: "About IPR Architects | Luxury Design-Build Firm in Hyderabad",
   description:
-    "IPR Architects — Hyderabad's premier integrated design-build firm. 12+ years, 150+ projects, 4 disciplines under one roof. Meet the team behind the city's finest residences.",
+    "IPR Architects — Hyderabad's premier integrated design-build firm. 6 years, 50+ projects, 4 disciplines under one roof. Meet the team behind the city's finest residences.",
   alternates: { canonical: "/about" },
 };
 
@@ -21,18 +21,18 @@ const VALUES = [
 ];
 
 const MILESTONES = [
-  { year: "2012", event: "IPR Architects founded in Hyderabad by a team of JNTU and SPA alumni." },
-  { year: "2015", event: "Expanded from architecture into full-scope interior design, adding an in-house ID studio." },
-  { year: "2018", event: "Construction division launched — becoming a true end-to-end design-build firm." },
-  { year: "2020", event: "Landscaping practice established. First full design-build project including all four disciplines delivered." },
-  { year: "2023", event: "100th project milestone. First commercial high-rise completed in Hi-Tech City." },
-  { year: "2025", event: "150+ projects completed. Team expanded with specialist structural and MEP engineers in-house." },
+  { year: "2020", event: "IPR Architects founded in Hyderabad by a team of JNTU and SPA alumni." },
+  { year: "2021", event: "Expanded from architecture into full-scope interior design, adding an in-house ID studio." },
+  { year: "2022", event: "Construction division launched — becoming a true end-to-end design-build firm." },
+  { year: "2023", event: "Landscaping practice established. First full design-build project including all four disciplines delivered." },
+  { year: "2024", event: "25th project milestone. First commercial building completed in Hi-Tech City." },
+  { year: "2026", event: "50+ projects completed. Team expanded with specialist structural and MEP engineers in-house." },
 ];
 
 const STATS = [
-  { v: "150+", l: "Projects" },
-  { v: "12+", l: "Years" },
-  { v: "500+", l: "Happy Clients" },
+  { v: "50+", l: "Projects" },
+  { v: "6", l: "Years" },
+  { v: "50+", l: "Happy Clients" },
   { v: "4", l: "Disciplines" },
 ];
 
@@ -59,12 +59,12 @@ export default function AboutPage() {
                 <SplitText as="h2" text="Built on one belief" className="font-display text-3xl leading-tight lg:text-[2.5rem]" />
                 <div className="mt-7 space-y-5 text-base leading-[1.85] text-muted-foreground">
                   <p>
-                    IPR Architects was founded in Hyderabad in 2012 by a group of architects who believed the city
+                    IPR Architects was founded in Hyderabad in 2020 by a group of architects who believed the city
                     deserved a firm with no upper limit — one that could take a client from a blank plot to a furnished,
                     landscaped home without ever passing the baton to a third party.
                   </p>
                   <p>
-                    Over 12 years and 150+ projects, that belief has proved itself. Our clients — from IT executives and
+                    Over six years and 50+ projects, that belief has proved itself. Our clients — from IT executives and
                     NRIs to industrialists — return to us for their next home, and refer us to their family, because we
                     deliver what we promise.
                   </p>
@@ -127,7 +127,7 @@ export default function AboutPage() {
           <Reveal>
             <div className="mb-14">
               <p className="eyebrow mb-6 text-accent-ink">History</p>
-              <SplitText as="h2" text="12 Years of Growth" className="display-wide" style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }} />
+              <SplitText as="h2" text="Six Years of Growth" className="display-wide" style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }} />
             </div>
           </Reveal>
           <div className="border-l border-border">

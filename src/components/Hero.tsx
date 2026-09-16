@@ -245,7 +245,7 @@ function Masthead({ progress }: { progress: MotionValue<number> }) {
 
   return (
     <motion.div className="hero-masthead" style={{ y, scale, opacity, transformOrigin: "left bottom" }}>
-      <p className="eyebrow mb-5 text-white/70 lg:mb-7 lg:text-accent-ink">Hyderabad · Est. 2012</p>
+      <p className="eyebrow mb-5 text-white/70 lg:mb-7 lg:text-accent-ink">Hyderabad · Est. 2020</p>
       <h1 className="font-display leading-[0.92] tracking-[-0.01em] text-white lg:text-foreground" style={{ fontSize: "clamp(2.5rem, 5.4vw, 5.25rem)" }}>
         IPR
         <br />

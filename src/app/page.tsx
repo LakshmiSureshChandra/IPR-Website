@@ -235,7 +235,7 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-6 lg:pt-4">
                   <p className="text-base leading-[1.85] text-muted-foreground">
-                    For twelve years we have designed and built in Hyderabad —
+                    For six years we have designed and built in Hyderabad —
                     high-rise residences, private villas and commercial
                     landmarks — for clients who wanted one firm to answer for
                     all of it. Architecture, structure, interiors and landscape
@@ -451,7 +451,7 @@ export default function HomePage() {
                 <p className="eyebrow mb-6 text-accent-ink">Clients</p>
                 <SplitText
                   as="h2"
-                  text="Trusted by five hundred families"
+                  text="Trusted by fifty families"
                   className="display-wide"
                   style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
                 />
