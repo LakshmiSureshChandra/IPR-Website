@@ -20,14 +20,6 @@ const VALUES = [
   { title: "Honest Timelines", desc: "We don't quote timelines we can't meet. If something changes, you know first. Transparency is non-negotiable." },
 ];
 
-const MILESTONES = [
-  { year: "2020", event: "IPR Architects founded in Hyderabad by a team of JNTU and SPA alumni." },
-  { year: "2021", event: "Expanded from architecture into full-scope interior design, adding an in-house ID studio." },
-  { year: "2022", event: "Construction division launched — becoming a true end-to-end design-build firm." },
-  { year: "2023", event: "Landscaping practice established. First full design-build project including all four disciplines delivered." },
-  { year: "2024", event: "25th project milestone. First commercial building completed in Hi-Tech City." },
-  { year: "2026", event: "50+ projects completed. Team expanded with specialist structural and MEP engineers in-house." },
-];
 
 const STATS = [
   { v: "50+", l: "Projects" },
@@ -121,31 +113,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── TIMELINE ── */}
-      <section className="bg-background py-24 lg:py-32">
-        <div className="mx-auto max-w-3xl px-6">
-          <Reveal>
-            <div className="mb-14">
-              <p className="eyebrow mb-6 text-accent-ink">History</p>
-              <SplitText as="h2" text="Six Years of Growth" className="display-wide" style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }} />
-            </div>
-          </Reveal>
-          <div className="border-l border-border">
-            {MILESTONES.map((m, i) => (
-              <Reveal key={m.year} delay={i * 0.05}>
-                <div className="relative flex gap-8 pb-10 pl-8">
-                  <span className="absolute -left-[3px] top-2 size-[5px] rounded-full bg-accent" />
-                  <div className="numeral w-14 shrink-0 text-lg text-accent-ink">{m.year}</div>
-                  <p className="pt-1 text-sm leading-relaxed text-muted-foreground">{m.event}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── GALLERY ── */}
-      <section className="bg-paper py-4">
+      <section className="bg-background py-4">
         <div className="grid grid-cols-3 gap-4 px-4">
           {[
             { src: "/images/renders/arch-exterior-3.webp", alt: "Architecture project by IPR" },
