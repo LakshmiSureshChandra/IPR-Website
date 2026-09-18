@@ -133,10 +133,6 @@ export default function LeadForm({ source, defaultService }: Props) {
           </>
         )}
       </Button>
-
-      <p className="text-center text-xs text-muted-foreground">
-        This opens WhatsApp with your details pre-filled. We respond within 24 hours.
-      </p>
     </form>
   );
 }
