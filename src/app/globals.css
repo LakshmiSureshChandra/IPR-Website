@@ -167,10 +167,10 @@ body {
 .hero-scrim-mobile {
   background-image: linear-gradient(
     to top,
-    rgba(17, 17, 16, 0.92) 0%,
-    rgba(17, 17, 16, 0.82) 30%,
-    rgba(17, 17, 16, 0.5) 44%,
-    rgba(17, 17, 16, 0) 66%
+    rgba(17, 17, 16, 0.9) 0%,
+    rgba(17, 17, 16, 0.72) 22%,
+    rgba(17, 17, 16, 0.36) 34%,
+    rgba(17, 17, 16, 0) 52%
   );
 }
 
@@ -183,9 +183,6 @@ body {
   /* Desktop runs ink on a light wash instead — none of this applies. */
   .hero-scrim-mobile { background-image: none; }
   .hero-shadow { text-shadow: none; }
-  /* Desktop has room for the masthead the whole way down; only phones drop it
-     once the film starts. !important because motion writes opacity inline. */
-  .hero-masthead { opacity: 1 !important; }
 }
 
 /* ── Intro wipe ────────────────────────────────────────────────────── */
