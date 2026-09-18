@@ -17,7 +17,7 @@ export default function ProjectsPage() {
   return (
     <>
       {/* ── HEADER ── */}
-      <section className="bg-background pb-14 pt-36 lg:pt-44">
+      <section className="bg-paper pb-14 pt-36 lg:pt-44">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
             <div>
@@ -39,15 +39,15 @@ export default function ProjectsPage() {
       </section>
 
       {/* ── GRID ── */}
-      <section className="bg-background pb-24 lg:pb-32">
+      <section className="bg-paper pb-24 lg:pb-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <ProjectsList />
         </div>
       </section>
 
       {/* ── CTA ── */}
-      <section className="relative bg-paper py-24 text-center">
-        <SectionCurve fill="text-paper" />
+      <section className="relative bg-paper-2 py-24 text-center">
+        <SectionCurve fill="text-paper-2" />
         <div className="mx-auto max-w-2xl px-6">
           <Reveal>
             <SplitText

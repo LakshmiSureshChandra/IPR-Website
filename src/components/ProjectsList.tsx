@@ -66,7 +66,7 @@ export default function ProjectsList() {
               className="grid items-center gap-10 border-t border-border py-14 first:border-t-0 lg:grid-cols-12 lg:gap-14 lg:py-20"
             >
               <div className={cn("lg:col-span-7", mirrored ? "lg:order-2" : "lg:order-1")}>
-                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.5rem] bg-paper">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.5rem] bg-paper-2">
                   <RevealImage
                     src={p.image}
                     alt={p.title}
@@ -101,7 +101,7 @@ export default function ProjectsList() {
                   {p.subs.map((src) => (
                     <div
                       key={src}
-                      className="relative aspect-[4/3] flex-1 overflow-hidden rounded-xl bg-paper"
+                      className="relative aspect-[4/3] flex-1 overflow-hidden rounded-xl bg-paper-2"
                     >
                       <RevealImage
                         src={src}
