@@ -52,6 +52,9 @@ const SERVICES = [
   },
 ];
 
+/* Each card sits a little lower than the last — a cascade across the row. */
+const PROJECT_STEP = ["", "lg:mt-6", "lg:mt-12", "lg:mt-[4.5rem]"];
+
 const APPROACH_STATS = [
   { value: "18", label: "Months, concept to keys" },
   { value: "4", label: "Disciplines, one team" },
@@ -321,7 +324,7 @@ export default function HomePage() {
         <section className="bg-paper py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <div className="mb-14 flex flex-wrap items-end justify-between gap-6">
+              <div className="mb-14 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
                 <div>
                   <p className="eyebrow mb-6 text-accent-ink">Selected Work</p>
                   <SplitText
@@ -331,31 +334,45 @@ export default function HomePage() {
                     style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
                   />
                 </div>
-                <Button asChild variant="outline" size="sm">
-                  <Link href="/projects">
-                    All Projects <ArrowRight />
-                  </Link>
-                </Button>
+                <p className="max-w-xl text-base leading-[1.85] text-muted-foreground lg:pt-3">
+                  Three homes drawn, engineered, built and furnished end to end.
+                  Each one was handed over by the same team that put the first
+                  line on paper.
+                </p>
               </div>
             </Reveal>
 
-            <div className="grid gap-5 md:grid-cols-3">
+            {/* Four across, so the cards sit at the same scale as the interiors
+                strip below. That section zigzags; this one steps down instead,
+                so the two read as different compositions rather than one
+                repeated twice. */}
+            <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
               {PROJECTS.map((p, i) => (
-                <Reveal key={p.slug} delay={i * 0.08}>
-                  <Link href={`/projects/${p.slug}`} className="group block">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-[1.5rem] bg-background">
+                <Reveal key={p.slug} delay={i * 0.07}>
+                  <Link
+                    href={`/projects/${p.slug}`}
+                    className={`group block ${PROJECT_STEP[i]}`}
+                  >
+                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.25rem] bg-background">
                       <RevealImage
                         src={p.image}
                         alt={p.title}
-                        sizes="(max-width: 768px) 100vw, 33vw"
+                        sizes="(max-width: 1024px) 50vw, 25vw"
                         className="absolute inset-0"
                         imageClassName="transition-transform duration-[1.2s] ease-out group-hover:scale-[1.05]"
                       />
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-7 pt-16">
-                        <Badge variant="light" className="mb-3">
+                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-5 pt-14">
+                        {/* The discipline list cannot fit a half-width phone
+                            card without being clipped, and a pill that wraps to
+                            three lines looks worse than none. The title carries
+                            it there. */}
+                        <Badge
+                          variant="light"
+                          className="mb-2.5 hidden text-[9px] tracking-[0.12em] sm:inline-flex"
+                        >
                           {p.type}
                         </Badge>
-                        <h3 className="font-display text-xl text-white">
+                        <h3 className="font-display text-base leading-snug text-white">
                           {p.title}
                         </h3>
                       </div>
@@ -363,6 +380,31 @@ export default function HomePage() {
                   </Link>
                 </Reveal>
               ))}
+
+              {/* Only three projects have case studies, so the fourth cell is
+                  the way through to the rest rather than a card that 404s. It
+                  also replaces the button that used to sit in the header. */}
+              <Reveal delay={0.21}>
+                <Link href="/projects" className="group block lg:mt-[4.5rem]">
+                  <div className="flex aspect-[4/5] w-full flex-col justify-between rounded-[1.25rem] border border-border bg-background p-5 transition-colors duration-500 group-hover:border-foreground/25">
+                    <span>
+                      <span className="numeral block text-4xl text-accent">50+</span>
+                      <span className="mt-2 block text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                        Projects delivered
+                      </span>
+                    </span>
+                    <span>
+                      <span className="block font-display text-base leading-snug">
+                        Every project, in one place
+                      </span>
+                      <span className="mt-3 inline-flex items-center gap-2 text-[12px] font-medium">
+                        All projects
+                        <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+                      </span>
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
             </div>
           </div>
         </section>
