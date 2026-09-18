@@ -3,6 +3,7 @@ import RevealImage from "@/components/anim/RevealImage";
 import SplitText from "@/components/anim/SplitText";
 import Footer from "@/components/Footer";
 import CTAButton from "@/components/CTAButton";
+import SectionCurve from "@/components/SectionCurve";
 import Reveal from "@/components/Reveal";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -129,14 +130,15 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-paper-2 py-24 text-center">
+      <section className="relative bg-paper-2 py-24 text-center">
+        <SectionCurve fill="text-paper-2" />
         <div className="mx-auto max-w-2xl px-6">
-          <SplitText as="h2" text="Work with us" className="display-wide text-white" style={{ fontSize: "clamp(1.6rem, 3.4vw, 2.8rem)" }} />
-          <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-white/65">
+          <SplitText as="h2" text="Work with us" className="display-wide" style={{ fontSize: "clamp(1.6rem, 3.4vw, 2.8rem)" }} />
+          <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
             Ready to build something extraordinary in Hyderabad? Let&apos;s start with a conversation.
           </p>
           <div className="mt-10">
-            <CTAButton source="home" label="Get in Touch" size="lg" variant="light" />
+            <CTAButton source="home" label="Get in Touch" size="lg" />
           </div>
         </div>
       </section>

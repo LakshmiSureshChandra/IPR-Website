@@ -235,12 +235,12 @@ function Actions() {
     // Kept to one row on a phone — two size-lg pills overflow 390px, and the
     // wrap pushes the whole copy block up out of the scrim.
     <div className="mt-10 flex flex-wrap gap-2.5 lg:mt-12 lg:gap-3">
-      <Button asChild size="lg" variant="accent" className="h-12 bg-background px-5 text-[12px] text-foreground hover:bg-white lg:h-14 lg:bg-foreground lg:px-8 lg:text-[14px] lg:text-background">
+      <Button asChild size="lg" variant="accent" className="h-12 bg-background px-5 text-[12px] text-foreground hover:bg-white lg:h-14 lg:bg-foreground lg:px-8 lg:text-[14px] lg:text-background lg:hover:bg-foreground/85">
         <a href={getWhatsAppLink("home")} target="_blank" rel="noopener noreferrer">
           <MessageCircle /> Get Consultation
         </a>
       </Button>
-      <Button asChild size="lg" variant="outline" className="h-12 border-white/45 bg-white/10 px-5 text-[12px] text-white hover:bg-white hover:text-foreground lg:h-14 lg:border-foreground/15 lg:bg-background/50 lg:px-8 lg:text-[14px] lg:text-foreground">
+      <Button asChild size="lg" variant="outline" className="h-12 border-white/45 bg-white/10 px-5 text-[12px] text-white hover:bg-white hover:text-foreground lg:h-14 lg:border-foreground/15 lg:bg-background/50 lg:px-8 lg:text-[14px] lg:text-foreground lg:hover:border-foreground lg:hover:bg-foreground lg:hover:text-background">
         <Link href="/projects">
           Explore Projects <ArrowRight />
         </Link>
