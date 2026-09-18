@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import SplitText from "@/components/anim/SplitText";
 import CTAButton from "@/components/CTAButton";
 import Footer from "@/components/Footer";
-import ProjectsGrid from "@/components/ProjectsGrid";
+import ProjectsList from "@/components/ProjectsList";
 import Reveal from "@/components/Reveal";
 import SectionCurve from "@/components/SectionCurve";
 
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
       {/* ── GRID ── */}
       <section className="bg-background pb-24 lg:pb-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <ProjectsGrid />
+          <ProjectsList />
         </div>
       </section>
 
