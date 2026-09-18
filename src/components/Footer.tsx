@@ -23,7 +23,7 @@ export default function Footer() {
       {/* Closing invitation — the last thing on every page is a way in. */}
       <div className="mx-auto max-w-7xl px-6 pb-16 pt-24 lg:px-10 lg:pt-32">
         <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)]">
-          <h2 className="font-display leading-[0.98] tracking-[-0.02em]" style={{ fontSize: "clamp(2.4rem, 6vw, 5.2rem)" }}>
+          <h2 className="font-display leading-[0.98] tracking-[-0.02em]" style={{ fontSize: "clamp(2rem, 3.9vw, 3.6rem)" }}>
             Let&apos;s draw
             <br />
             <span className="italic font-normal">something worth building.</span>
