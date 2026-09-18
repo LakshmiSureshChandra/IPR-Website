@@ -272,50 +272,47 @@ export default function HomePage() {
         </section>
 
         {/* ── APPROACH ────────────────────────────────────────────── */}
-        <section className="bg-foreground py-28 text-background lg:py-40">
+        {/* No photograph here on purpose. The only render that fitted the slot
+            was a cool grey-and-mustard interior that fought the warm travertine
+            palette everywhere else, and this sits between a full-width image
+            above and four project cards below — the page can afford one quiet
+            beat. The numerals carry it instead. */}
+        <section className="bg-foreground py-24 text-background lg:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
-              <Reveal>
+            <Reveal>
+              <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
                 <div>
-                  <p className="eyebrow mb-6 text-accent">Our Approach</p>
-                  <h2 className="font-display text-3xl leading-[1.15] lg:text-[3.2rem]">
-                    Our approach goes beyond a building.
-                  </h2>
-                  <p className="mt-7 max-w-lg text-base leading-[1.85] text-background/65">
-                    Most firms hand you off — architect to contractor to
-                    decorator, each one blaming the last. We keep every
-                    discipline in the building, so the person who drew your
-                    elevation is the person who signs off on the finish that
-                    lands on it.
-                  </p>
-
-                  <div className="mt-12 grid grid-cols-3 divide-x divide-white/10 border-y border-white/10">
-                    {APPROACH_STATS.map((s) => (
-                      <div key={s.label} className="px-4 py-7 first:pl-0">
-                        <div className="numeral text-3xl text-accent lg:text-5xl">
-                          {s.value}
-                        </div>
-                        <div className="mt-2 text-[10px] uppercase leading-relaxed tracking-[0.18em] text-background/50">
-                          {s.label}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </Reveal>
-
-              <Reveal delay={0.1}>
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem]">
-                  <RevealImage
-                    src="/images/renders/interior-living-2.webp"
-                    alt="Living room interior by IPR Architects"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="absolute inset-0"
-                    imageClassName=""
+                  <p className="eyebrow mb-6 text-background/55">Our Approach</p>
+                  <SplitText
+                    as="h2"
+                    text="Beyond a building"
+                    className="display-wide"
+                    style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
                   />
                 </div>
-              </Reveal>
-            </div>
+                <p className="max-w-xl text-base leading-[1.85] text-background/65 lg:pt-3">
+                  Most firms hand you off — architect to contractor to
+                  decorator, each one blaming the last. We keep every discipline
+                  in the building, so the person who drew your elevation is the
+                  person who signs off on the finish that lands on it.
+                </p>
+              </div>
+            </Reveal>
+
+            {/* Warm white, not the bronze accent: at 7d6a4f on near-black it
+                went muddy rather than gold. */}
+            <Reveal delay={0.1}>
+              <div className="mt-16 grid grid-cols-3 divide-x divide-white/10 border-y border-white/10 lg:mt-20">
+                {APPROACH_STATS.map((s) => (
+                  <div key={s.label} className="px-4 py-8 first:pl-0 lg:px-9 lg:py-11">
+                    <div className="numeral text-4xl lg:text-6xl">{s.value}</div>
+                    <div className="mt-3 text-[10px] uppercase leading-relaxed tracking-[0.2em] text-background/45">
+                      {s.label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </section>
 
