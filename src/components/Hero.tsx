@@ -210,10 +210,13 @@ function Copy({ progress }: { progress: MotionValue<number> }) {
 }
 
 function Masthead({ progress }: { progress: MotionValue<number> }) {
-  const y = useTransform(progress, [0, 1], [0, -60]);
+  // Scale only, anchored bottom-left. It used to drift up 60px as well, but the
+  // CTA row underneath does not move, so that drift just opened a widening gap
+  // between them — 48px at rest, 108px by the end of the scrub. Scaling from
+  // the bottom edge keeps the masthead a fixed distance above the buttons.
   const scale = useTransform(progress, [0, 0.2, 1], [1, 0.78, 0.78]);
   return (
-    <motion.div style={{ y, scale, transformOrigin: "left bottom" }}>
+    <motion.div style={{ scale, transformOrigin: "left bottom" }}>
       <p className="eyebrow mb-5 text-white/70 lg:mb-7 lg:text-accent-ink">Hyderabad</p>
       <h1 className="font-display leading-[0.92] tracking-[-0.01em] text-white lg:text-foreground" style={{ fontSize: "clamp(2.5rem, 5.4vw, 5.25rem)" }}>
         IPR
