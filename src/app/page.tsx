@@ -7,6 +7,7 @@ import CTAButton from "@/components/CTAButton";
 import Footer from "@/components/Footer";
 import LeadForm from "@/components/LeadForm";
 import Reveal from "@/components/Reveal";
+import SectionCurve from "@/components/SectionCurve";
 import SplitText from "@/components/anim/SplitText";
 import RevealImage from "@/components/anim/RevealImage";
 import { Badge } from "@/components/ui/badge";
@@ -222,7 +223,8 @@ export default function HomePage() {
         </section>
 
         {/* ── WELCOME ─────────────────────────────────────────────── */}
-        <section className="bg-background py-24 lg:py-32">
+        <section className="relative bg-paper py-24 lg:py-32">
+          <SectionCurve fill="text-paper" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <div className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
@@ -277,7 +279,8 @@ export default function HomePage() {
             palette everywhere else, and this sits between a full-width image
             above and four project cards below — the page can afford one quiet
             beat. The numerals carry it instead. */}
-        <section className="bg-foreground py-24 text-background lg:py-32">
+        <section className="relative bg-foreground py-24 text-background lg:py-32">
+          <SectionCurve fill="text-foreground" flip />
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
@@ -317,7 +320,8 @@ export default function HomePage() {
         </section>
 
         {/* ── SIGNATURE PROJECTS ──────────────────────────────────── */}
-        <section className="bg-paper py-24 lg:py-32">
+        <section className="relative bg-paper py-24 lg:py-32">
+          <SectionCurve fill="text-paper" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <div className="mb-14 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
@@ -406,7 +410,9 @@ export default function HomePage() {
         </section>
 
         {/* ── INTERIORS GALLERY ───────────────────────────────────── */}
-        <section className="bg-background py-24 lg:py-32">
+        <section className="relative bg-background py-24 lg:py-32">
+          <SectionCurve fill="text-background" flip />
+          <SectionCurve fill="text-background" place="bottom" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <div className="mb-14 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
@@ -482,7 +488,8 @@ export default function HomePage() {
         </section>
 
         {/* ── TESTIMONIALS ────────────────────────────────────────── */}
-        <section className="bg-background py-24 lg:py-32">
+        <section className="relative bg-background py-24 lg:py-32">
+          <SectionCurve fill="text-background" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
               <div className="mb-14 text-center">
@@ -524,8 +531,9 @@ export default function HomePage() {
         {/* ── LEAD FORM ───────────────────────────────────────────── */}
         <section
           id="consult"
-          className="border-t border-border bg-paper py-24 lg:py-32"
+          className="relative bg-paper py-24 lg:py-32"
         >
+          <SectionCurve fill="text-paper" flip />
           <div className="mx-auto max-w-3xl px-6">
             <Reveal>
               <div className="mb-12 text-center">

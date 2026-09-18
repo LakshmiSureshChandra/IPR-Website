@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import SectionCurve from "@/components/SectionCurve";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 import { Button } from "@/components/ui/button";
 
@@ -19,7 +20,8 @@ const COMPANY = [
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-background">
+    <footer className="relative bg-foreground text-background">
+      <SectionCurve fill="text-foreground" />
       {/* Closing invitation — the last thing on every page is a way in. */}
       <div className="mx-auto max-w-7xl px-6 pb-16 pt-24 lg:px-10 lg:pt-32">
         <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)]">
