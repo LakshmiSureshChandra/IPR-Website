@@ -34,9 +34,6 @@ export default function Footer() {
                 Start a project <ArrowUpRight />
               </a>
             </Button>
-            <Button asChild size="lg" variant="ghost" className="text-background hover:bg-white/10">
-              <a href="tel:+917989072745">+91 79890 72745</a>
-            </Button>
           </div>
         </div>
 

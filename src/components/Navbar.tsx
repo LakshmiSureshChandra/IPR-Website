@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ArrowRight, Phone } from "lucide-react";
+import { Menu, ArrowRight } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 import { trackWhatsAppClick } from "@/components/Analytics";
 import { Button } from "@/components/ui/button";
@@ -181,7 +181,7 @@ export default function Navbar() {
               </ul>
             </nav>
 
-            <div className="space-y-3 border-t border-border px-6 py-6">
+            <div className="border-t border-border px-6 py-6">
               <Button asChild className="w-full">
                 <a
                   href={getWhatsAppLink("home")}
@@ -190,11 +190,6 @@ export default function Navbar() {
                   onClick={() => { trackWhatsAppClick("navbar-mobile"); setMobileOpen(false); }}
                 >
                   Start a project <ArrowRight />
-                </a>
-              </Button>
-              <Button asChild variant="outline" className="w-full">
-                <a href="tel:+917989072745">
-                  <Phone /> +91 79890 72745
                 </a>
               </Button>
             </div>

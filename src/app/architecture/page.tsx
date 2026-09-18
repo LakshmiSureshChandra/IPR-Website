@@ -3,7 +3,7 @@ import ServiceLayout from "@/components/ServiceLayout";
 
 export const metadata: Metadata = {
   title: "Architecture Services in Hyderabad | IPR Architects",
-  description: "Award-winning architectural design for villas, bungalows and commercial spaces in Hyderabad. GHMC/HMDA approved plans, 3D visualisation, structural drawings. Call IPR Architects today.",
+  description: "Award-winning architectural design for villas, bungalows and commercial spaces in Hyderabad. GHMC/HMDA approved plans, 3D visualisation, structural drawings. Message IPR Architects on WhatsApp today.",
   keywords: ["architects in Hyderabad", "architectural design Hyderabad", "villa architect Hyderabad", "GHMC approved architects", "luxury home design Hyderabad", "best architects Telangana"],
   alternates: { canonical: "/architecture" },
 };

@@ -127,7 +127,6 @@ const SCHEMA = {
     "Hyderabad's premier design-build firm — Architecture, Interior Design, Construction, Landscaping.",
   url: "https://iprarchitects.in",
   logo: "https://iprarchitects.in/images/logo/logo-gold.png",
-  telephone: "+91-7989072745",
   email: "contact@iprarchitects.com",
   address: {
     "@type": "PostalAddress",

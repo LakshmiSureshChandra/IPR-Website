@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { LeadSource } from "@/lib/whatsapp";
+import { LeadSource, WHATSAPP_NUMBER } from "@/lib/whatsapp";
 import { trackLead } from "@/components/Analytics";
 import { Send, Check } from "lucide-react";
 import { Input, Textarea, Select, Label } from "@/components/ui/input";
@@ -57,7 +57,7 @@ export default function LeadForm({ source, defaultService }: Props) {
 
     await new Promise((r) => setTimeout(r, 500));
     setStatus("sent");
-    window.open(`https://wa.me/917989072745?text=${msg}`, "_blank");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank");
   };
 
   if (status === "sent") {

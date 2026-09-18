@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import SplitText from "@/components/anim/SplitText";
 import Footer from "@/components/Footer";
 import LeadForm from "@/components/LeadForm";
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Contact IPR Architects | Free Consultation — Hyderabad",
   description:
-    "Contact IPR Architects for architecture, interior design, construction and landscaping services in Hyderabad. Call, WhatsApp or fill in the form for a free consultation.",
+    "Contact IPR Architects for architecture, interior design, construction and landscaping services in Hyderabad. Message us on WhatsApp or fill in the form for a free consultation.",
   alternates: { canonical: "/contact" },
 };
 
@@ -21,7 +21,6 @@ const SCHEMA = {
   mainEntity: {
     "@type": "ArchitectFirm",
     name: "IPR Architects",
-    telephone: "+91-7989072745",
     email: "contact@iprarchitects.com",
     address: {
       "@type": "PostalAddress",
@@ -84,12 +83,6 @@ export default function ContactPage() {
               </div>
 
               <div className="divide-y divide-border border-y border-border">
-                <ContactRow icon={<Phone className="size-4 text-accent" />} label="Phone">
-                  <a href="tel:+917989072745" className="transition-colors hover:text-accent-ink">
-                    +91 79890 72745
-                  </a>
-                </ContactRow>
-
                 <ContactRow icon={<Mail className="size-4 text-accent" />} label="Email">
                   <a href="mailto:contact@iprarchitects.com" className="transition-colors hover:text-accent-ink">
                     contact@iprarchitects.com
