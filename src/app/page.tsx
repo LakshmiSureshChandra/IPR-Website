@@ -27,28 +27,28 @@ const SERVICES = [
     n: "01",
     title: "Architecture",
     desc: "Concept, approvals and working drawings — the plan that everything else is built from.",
-    href: "/architecture",
+    id: "architecture",
     image: "/images/story/plan.webp",
   },
   {
     n: "02",
     title: "Construction",
     desc: "Turnkey delivery with in-house engineering, fixed-cost contracts and on-time handover.",
-    href: "/construction",
+    id: "construction",
     image: "/images/story/structure.webp",
   },
   {
     n: "03",
     title: "Landscaping",
     desc: "Pool, terrace, garden and boulder — the site composed with the same rigour as the building.",
-    href: "/landscaping",
+    id: "landscaping",
     image: "/images/story/tower.webp",
   },
   {
     n: "04",
     title: "Interior Design",
     desc: "Joinery, stone and light — every surface specified before the first wall goes up.",
-    href: "/interior-design",
+    id: "interior-design",
     image: "/images/story/interior.webp",
   },
 ];
@@ -187,10 +187,13 @@ export default function HomePage() {
 
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {SERVICES.map((s, i) => (
-                <Reveal key={s.href} delay={i * 0.07}>
-                  <Link
-                    href={s.href}
-                    className="group block h-full overflow-hidden rounded-[1.5rem] border border-border/80 bg-card transition-[box-shadow,transform,border-color] duration-500 hover:-translate-y-1 hover:border-foreground/15 hover:shadow-[0_30px_60px_-40px_rgba(17,17,16,0.35)]"
+                <Reveal key={s.id} delay={i * 0.07}>
+                  {/* Anchor targets, not links: the per-discipline pages are
+                      gone, so the nav and footer scroll here instead.
+                      scroll-mt clears the fixed navbar. */}
+                  <div
+                    id={s.id}
+                    className="group h-full scroll-mt-28 overflow-hidden rounded-[1.5rem] border border-border/80 bg-card transition-[box-shadow,transform,border-color] duration-500 hover:-translate-y-1 hover:border-foreground/15 hover:shadow-[0_30px_60px_-40px_rgba(17,17,16,0.35)]"
                   >
                     <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-[1.5rem]">
                       <RevealImage
@@ -205,17 +208,12 @@ export default function HomePage() {
                       <span className="numeral text-xs tracking-[0.3em] text-accent">
                         {s.n}
                       </span>
-                      <h3 className="mt-3 font-display text-xl transition-colors group-hover:text-accent-ink">
-                        {s.title}
-                      </h3>
+                      <h3 className="mt-3 font-display text-xl">{s.title}</h3>
                       <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                         {s.desc}
                       </p>
-                      <span className="mt-5 inline-flex items-center gap-2 text-[12px] font-medium text-foreground opacity-0 transition-opacity group-hover:opacity-100">
-                        Explore <ArrowRight className="size-3" />
-                      </span>
                     </div>
-                  </Link>
+                  </div>
                 </Reveal>
               ))}
             </div>
@@ -349,10 +347,7 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
               {PROJECTS.map((p, i) => (
                 <Reveal key={p.slug} delay={i * 0.07}>
-                  <Link
-                    href={`/projects/${p.slug}`}
-                    className={`group block ${PROJECT_STEP[i]}`}
-                  >
+                  <Link href="/projects" className={`group block ${PROJECT_STEP[i]}`}>
                     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.25rem] bg-background">
                       <RevealImage
                         src={p.image}

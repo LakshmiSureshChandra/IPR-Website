@@ -6,10 +6,10 @@ import { getWhatsAppLink } from "@/lib/whatsapp";
 import { Button } from "@/components/ui/button";
 
 const SERVICES = [
-  { label: "Architecture", href: "/architecture" },
-  { label: "Construction", href: "/construction" },
-  { label: "Interior Design", href: "/interior-design" },
-  { label: "Landscaping", href: "/landscaping" },
+  { label: "Architecture", href: "/#architecture" },
+  { label: "Construction", href: "/#construction" },
+  { label: "Interior Design", href: "/#interior-design" },
+  { label: "Landscaping", href: "/#landscaping" },
 ];
 
 const COMPANY = [

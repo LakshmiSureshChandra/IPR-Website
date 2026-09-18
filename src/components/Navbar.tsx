@@ -8,30 +8,20 @@ import { Menu, ArrowRight } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 import { trackWhatsAppClick } from "@/components/Analytics";
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navTriggerClass,
-} from "@/components/ui/navigation-menu";
 import { Sheet, SheetClose, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
-const SERVICES = [
-  { label: "Architecture", desc: "Concept, approvals, working drawings", href: "/architecture" },
-  { label: "Construction", desc: "Turnkey build, fixed-cost contracts", href: "/construction" },
-  { label: "Interior Design", desc: "Spaces, joinery and fit-out", href: "/interior-design" },
-  { label: "Landscaping", desc: "Gardens, pools and courtyards", href: "/landscaping" },
-];
-
+/* Three links is the whole site. The disciplines used to sit behind an "Our
+   Craft" dropdown; with no page of their own to open, a menu that only scrolled
+   the home page was not worth the weight. The footer still links to them. */
 const NAV_LINKS = [
   { label: "Projects", href: "/projects" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
+
+const linkClass =
+  "text-[13px] font-medium tracking-[0.01em] text-foreground/70 outline-none transition-colors duration-200 hover:text-foreground focus-visible:text-foreground";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -76,49 +66,16 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden items-center gap-7 lg:flex">
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Our Craft</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[34rem] grid-cols-2 gap-1 p-2">
-                    {SERVICES.map((s) => (
-                      <li key={s.href}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href={s.href}
-                            className="group/item block rounded-2xl p-4 transition-colors duration-200 hover:bg-paper"
-                          >
-                            <span className="flex items-center justify-between text-[14px] font-medium text-foreground">
-                              {s.label}
-                              <ArrowRight className="size-3.5 -translate-x-1 opacity-0 transition-all duration-300 group-hover/item:translate-x-0 group-hover/item:opacity-100" />
-                            </span>
-                            <span className="mt-1.5 block text-[12px] leading-relaxed text-muted-foreground">
-                              {s.desc}
-                            </span>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-
-              {NAV_LINKS.map((l) => (
-                <NavigationMenuItem key={l.href}>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      href={l.href}
-                      className={cn(navTriggerClass, pathname === l.href && "text-foreground")}
-                    >
-                      {l.label}
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              ))}
-            </NavigationMenuList>
-          </NavigationMenu>
+        <div className="hidden items-center gap-8 lg:flex">
+          {NAV_LINKS.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className={cn(linkClass, pathname === l.href && "text-foreground")}
+            >
+              {l.label}
+            </Link>
+          ))}
 
           <Button asChild size="sm">
             <a
@@ -147,32 +104,12 @@ export default function Navbar() {
               <Image src="/images/logo/logo-gold.png" alt="IPR Architects" width={220} height={220} className="h-12 w-auto object-contain" />
             </div>
 
-            <nav className="flex-1 overflow-y-auto px-6 py-6">
-              <p className="eyebrow mb-4 text-muted-foreground">Our craft</p>
-              <ul className="mb-9 space-y-px">
-                {SERVICES.map((s) => (
-                  <li key={s.href}>
-                    <SheetClose asChild>
-                      <Link
-                        href={s.href}
-                        className="group/m flex items-baseline justify-between border-b border-border py-3.5"
-                      >
-                        <span className="font-display text-2xl transition-colors group-hover/m:text-foreground/60">
-                          {s.label}
-                        </span>
-                        <ArrowRight className="size-4 opacity-0 transition-opacity group-hover/m:opacity-100" />
-                      </Link>
-                    </SheetClose>
-                  </li>
-                ))}
-              </ul>
-
-              <p className="eyebrow mb-4 text-muted-foreground">Studio</p>
+            <nav className="flex-1 overflow-y-auto px-6 py-8">
               <ul className="space-y-px">
                 {NAV_LINKS.map((l) => (
                   <li key={l.href}>
                     <SheetClose asChild>
-                      <Link href={l.href} className="block border-b border-border py-3.5 font-display text-2xl">
+                      <Link href={l.href} className="block border-b border-border py-4 font-display text-2xl">
                         {l.label}
                       </Link>
                     </SheetClose>
