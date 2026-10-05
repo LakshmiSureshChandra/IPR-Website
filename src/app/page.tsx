@@ -8,10 +8,10 @@ import Footer from "@/components/Footer";
 import LeadForm from "@/components/LeadForm";
 import Reveal from "@/components/Reveal";
 import SectionCurve from "@/components/SectionCurve";
+import SpatialShowcase from "@/components/SpatialShowcase";
 import SplitText from "@/components/anim/SplitText";
 import RevealImage from "@/components/anim/RevealImage";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
@@ -220,55 +220,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── WELCOME ─────────────────────────────────────────────── */}
+        {/* ── SHOWCASE ────────────────────────────────────────────── */}
+        {/* Replaces the old welcome copy. The stage is full width on purpose:
+            the side cards bleed to the viewport edge on a phone, so it cannot sit
+            inside the padded container. */}
         <section className="relative bg-paper py-24 lg:py-32">
           <SectionCurve fill="text-paper" />
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <Reveal>
-              <div className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
-                <div>
-                  <p className="eyebrow mb-6 text-accent-ink">Welcome</p>
-                  <SplitText
-                    as="h2"
-                    text="Welcome to IPR Architects"
-                    className="display-wide text-foreground"
-                    style={{ fontSize: "clamp(1.7rem, 3.4vw, 2.9rem)" }}
-                  />
-                </div>
-                <div className="space-y-6 lg:pt-4">
-                  <p className="text-base leading-[1.85] text-muted-foreground">
-                    For six years we have designed and built in Hyderabad —
-                    high-rise residences, private villas and commercial
-                    landmarks — for clients who wanted one firm to answer for
-                    all of it. Architecture, structure, interiors and landscape
-                    are drawn by the same studio, priced by the same team and
-                    delivered by the same project manager.
-                  </p>
-                  <p className="text-base leading-[1.85] text-muted-foreground">
-                    Nothing gets handed off. Nothing gets lost between the
-                    drawing and the wall.
-                  </p>
-                  <Button asChild variant="ghost" className="px-0">
-                    <Link href="/about">
-                      Our Story <ArrowRight />
-                    </Link>
-                  </Button>
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.1}>
-              <div className="relative mt-16 aspect-[16/7] w-full overflow-hidden rounded-[2rem] lg:mt-20">
-                <RevealImage
-                  src="/images/renders/hero-courtyard.webp"
-                  alt="IPR Architects — landscaped residential entrance in Hyderabad"
-                  sizes="100vw"
-                  className="absolute inset-0"
-                  imageClassName=""
-                />
-              </div>
-            </Reveal>
-          </div>
+          <SpatialShowcase />
         </section>
 
         {/* ── APPROACH ────────────────────────────────────────────── */}
