@@ -1,78 +1,60 @@
-/**
- * Slides for the spatial showcase on the home page.
- *
- * Placeholder imagery: swap `image` for any picture, ideally landscape or
- * portrait at 1400px or more on the long edge. Cards are 3:4, so a landscape
- * render is centre-cropped; set `focus` (a CSS object-position, e.g. "30% 50%")
- * to move the crop. Titles and copy describe the current pictures, so change
- * them together with the image.
- *
- * Keep an odd number of slides: the coverflow shows five at a time and the odd
- * count is what lets the hidden ones wrap round invisibly.
- */
 export interface Slide {
   title: string;
-  /** Short category shown under the title on the side cards. */
   tag: string;
   text: string;
-  /** Disciplines involved, shown on the centre card. */
   services: string;
   image: string;
   focus?: string;
 }
 
-const R = "/images/renders";
-
 export const SLIDES: Slide[] = [
   {
-    title: "Poolside Villa",
-    tag: "Residence",
-    text: "A single-storey villa drawn around its pool, with the architecture, the build and the landscape all delivered by one team.",
-    services: "Architecture · Construction",
-    image: `${R}/arch-exterior-2.webp`,
+    "title": "The Courtyard Villa",
+    "tag": "Residence",
+    "text": "Water, stone and deep shaded terraces, composed as one continuous living space.",
+    "services": "Architecture \u00b7 Landscape",
+    "image": "/images/portfolio/pool-pavilion.webp"
   },
   {
-    title: "Garden Courtyard",
-    tag: "Landscape",
-    text: "Planting, water and stone composed with the same rigour as the building around them.",
-    services: "Landscaping · Architecture",
-    image: `${R}/arch-exterior-3.webp`,
+    "title": "Gardens After Hours",
+    "tag": "Landscape",
+    "text": "A garden that comes alive at dusk, with layers of planting, water and warm light.",
+    "services": "Landscaping",
+    "image": "/images/portfolio/resort-landscape.webp"
   },
   {
-    title: "Living Room",
-    tag: "Interior",
-    text: "Joinery, lighting and soft furnishing specified during design, not after handover.",
-    services: "Interior Design",
-    image: `${R}/interior-living-2.webp`,
-    focus: "42% 50%",
+    "title": "The Art of Living",
+    "tag": "Interior",
+    "text": "Warm timber and richly textured stone frame a generous, contemporary salon.",
+    "services": "Interior Design",
+    "image": "/images/portfolio/contemporary-salon.webp"
   },
   {
-    title: "Commercial Facade",
-    tag: "Commercial",
-    text: "A lit, layered facade taken from first concept through structure, approvals and handover.",
-    services: "Architecture · Construction",
-    image: `${R}/arch-commercial-tower.webp`,
+    "title": "Urban Architecture",
+    "tag": "Architecture",
+    "text": "Shaded balconies and a layered facade bring a human scale to the city.",
+    "services": "Architecture \u00b7 Construction",
+    "image": "/images/portfolio/urban-residence.webp"
   },
   {
-    title: "Drawing Room",
-    tag: "Interior",
-    text: "A terrazzo feature wall and quiet joinery, chosen and costed before the first wall went up.",
-    services: "Interior Design",
-    image: `${R}/interior-drawing-room.webp`,
-    focus: "30% 50%",
+    "title": "Light & Softness",
+    "tag": "Interior",
+    "text": "Natural light, tactile fabrics and a quiet palette make room for everyday life.",
+    "services": "Interior Design",
+    "image": "/images/portfolio/sunlit-lounge.webp"
   },
   {
-    title: "Entrance Courtyard",
-    tag: "Landscape",
-    text: "An arrival that sets the tone: pale stone underfoot, warm light overhead, planting to either side.",
-    services: "Landscaping · Construction",
-    image: `${R}/hero-courtyard.webp`,
+    "title": "The Private Cinema",
+    "tag": "Interior",
+    "text": "An intimate cinema in timber and leather, with every light carefully placed.",
+    "services": "Interior Design",
+    "image": "/images/portfolio/private-cinema.webp"
   },
   {
-    title: "Master Suite",
-    tag: "Interior",
-    text: "Soft layers, low light and storage that disappears, planned around how the family actually lives.",
-    services: "Interior Design",
-    image: `${R}/interior-master-bedroom.webp`,
-  },
+    "title": "Private Retreats",
+    "tag": "Interior",
+    "text": "A restful suite with tailored joinery, warm finishes and soft, layered light.",
+    "services": "Interior Design",
+    "image": "/images/portfolio/classic-suite.webp"
+  }
 ];

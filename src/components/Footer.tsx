@@ -45,6 +45,14 @@ export default function Footer() {
             <p className="max-w-xs text-sm leading-relaxed text-background/55">
               Hyderabad&apos;s design-build studio. Architecture, interiors, construction and landscape under one roof.
             </p>
+            <a
+              href="https://share.google/7ICsBQ0BCliwJRNGy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2.5 text-xs text-background/75 transition-colors hover:border-white/35 hover:text-background focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-background"
+            >
+              Google reviews <ArrowUpRight className="size-3.5" aria-hidden="true" />
+            </a>
           </div>
 
           <div>

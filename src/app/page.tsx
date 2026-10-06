@@ -12,7 +12,6 @@ import SpatialShowcase from "@/components/SpatialShowcase";
 import SplitText from "@/components/anim/SplitText";
 import RevealImage from "@/components/anim/RevealImage";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title:
@@ -20,103 +19,78 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-/* The four disciplines, in the order the hero film tells them — each card is a
-   still from the same sequence, so the section reads as the film continuing. */
+/* The four disciplines illustrated with the supplied portfolio. */
 const SERVICES = [
   {
     n: "01",
     title: "Architecture",
     desc: "Concept, approvals and working drawings — the plan that everything else is built from.",
     id: "architecture",
-    image: "/images/story/plan.webp",
+    image: "/images/portfolio/cantilever-residence.webp",
   },
   {
     n: "02",
     title: "Construction",
     desc: "Turnkey delivery with in-house engineering, fixed-cost contracts and on-time handover.",
     id: "construction",
-    image: "/images/story/structure.webp",
+    image: "/images/portfolio/urban-residence.webp",
   },
   {
     n: "03",
     title: "Landscaping",
     desc: "Pool, terrace, garden and boulder — the site composed with the same rigour as the building.",
     id: "landscaping",
-    image: "/images/story/tower.webp",
+    image: "/images/portfolio/resort-landscape.webp",
   },
   {
     n: "04",
     title: "Interior Design",
     desc: "Joinery, stone and light — every surface specified before the first wall goes up.",
     id: "interior-design",
-    image: "/images/story/interior.webp",
+    image: "/images/portfolio/contemporary-salon.webp",
   },
 ];
 
 /* Each card sits a little lower than the last — a cascade across the row. */
 const PROJECT_STEP = ["", "lg:mt-6", "lg:mt-12", "lg:mt-[4.5rem]"];
 
-const APPROACH_STATS = [
-  { value: "18", label: "Months, concept to keys" },
-  { value: "4", label: "Disciplines, one team" },
-  { value: "24/7", label: "Project manager access" },
-];
-
 const PROJECTS = [
   {
-    title: "Villa — Jubilee Hills",
+    title: "The Garden Residences",
     type: "Design · Build · Interiors",
-    image: "/images/renders/arch-exterior-2.webp",
+    image: "/images/portfolio/villa-avenue.webp",
     slug: "jubilee-hills-villa",
   },
   {
-    title: "Villa — Gachibowli",
+    title: "The Courtyard Villa",
     type: "Architecture · Landscape",
-    image: "/images/renders/arch-exterior-3.webp",
+    image: "/images/portfolio/pool-pavilion.webp",
     slug: "gachibowli-villa",
   },
   {
-    title: "Residence — Banjara Hills",
+    title: "The Cantilever Residence",
     type: "Full Design-Build",
-    image: "/images/renders/hero-villa-night.webp",
+    image: "/images/portfolio/cantilever-residence.webp",
     slug: "banjara-hills-residence",
   },
 ];
 
 const INTERIORS = [
   {
-    src: "/images/renders/interior-drawing-room.webp",
+    src: "/images/portfolio/rose-salon.webp",
     alt: "Drawing room interior, Hyderabad residence",
   },
   {
-    src: "/images/renders/project-2-exterior.webp",
+    src: "/images/portfolio/classic-suite.webp",
     alt: "Master bedroom interior design",
   },
   {
-    src: "/images/renders/interior-room-3.webp",
-    alt: "Dining and pantry design",
+    src: "/images/portfolio/executive-study.webp",
+    alt: "Timber-lined executive study",
   },
   {
-    src: "/images/renders/project-2-interior.webp",
-    alt: "Home study and work nook",
-  },
-];
-
-const TESTIMONIALS = [
-  {
-    name: "Venkata Reddy",
-    project: "Villa, Jubilee Hills",
-    text: "The renders matched the finished home exactly — no surprises. The detail is extraordinary.",
-  },
-  {
-    name: "Priya Sharma",
-    project: "Interiors, Gachibowli",
-    text: "From concept to keys, effortless. Friends can't believe we live in a house this beautiful.",
-  },
-  {
-    name: "Rajesh Patel",
-    project: "Office, Hi-Tech City",
-    text: "Worth every rupee. They genuinely over-delivered, and on time.",
+    src: "/images/portfolio/private-cinema.webp",
+    alt: "Private cinema with leather recliners",
   },
 ];
 
@@ -195,7 +169,7 @@ export default function HomePage() {
                     id={s.id}
                     className="group h-full scroll-mt-28 overflow-hidden rounded-[1.5rem] border border-border/80 bg-card transition-[box-shadow,transform,border-color] duration-500 hover:-translate-y-1 hover:border-foreground/15 hover:shadow-[0_30px_60px_-40px_rgba(17,17,16,0.35)]"
                   >
-                    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-t-[1.5rem]">
+                    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-t-[1.5rem]">
                       <RevealImage
                         src={s.image}
                         alt={s.title}
@@ -229,52 +203,6 @@ export default function HomePage() {
           <SpatialShowcase />
         </section>
 
-        {/* ── APPROACH ────────────────────────────────────────────── */}
-        {/* No photograph here on purpose. The only render that fitted the slot
-            was a cool grey-and-mustard interior that fought the warm travertine
-            palette everywhere else, and this sits between a full-width image
-            above and four project cards below — the page can afford one quiet
-            beat. The numerals carry it instead. */}
-        <section className="relative bg-foreground py-24 text-background lg:py-32">
-          <SectionCurve fill="text-foreground" flip />
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <Reveal>
-              <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
-                <div>
-                  <p className="eyebrow mb-6 text-background/55">Our Approach</p>
-                  <SplitText
-                    as="h2"
-                    text="Beyond a building"
-                    className="display-wide"
-                    style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
-                  />
-                </div>
-                <p className="max-w-xl text-base leading-[1.85] text-background/65 lg:pt-3">
-                  Most firms hand you off — architect to contractor to
-                  decorator, each one blaming the last. We keep every discipline
-                  in the building, so the person who drew your elevation is the
-                  person who signs off on the finish that lands on it.
-                </p>
-              </div>
-            </Reveal>
-
-            {/* Warm white, not the bronze accent: at 7d6a4f on near-black it
-                went muddy rather than gold. */}
-            <Reveal delay={0.1}>
-              <div className="mt-16 grid grid-cols-3 divide-x divide-white/10 border-y border-white/10 lg:mt-20">
-                {APPROACH_STATS.map((s) => (
-                  <div key={s.label} className="px-4 py-8 first:pl-0 lg:px-9 lg:py-11">
-                    <div className="numeral text-4xl lg:text-6xl">{s.value}</div>
-                    <div className="mt-3 text-[10px] uppercase leading-relaxed tracking-[0.2em] text-background/45">
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
         {/* ── SIGNATURE PROJECTS ──────────────────────────────────── */}
         <section className="relative bg-paper py-24 lg:py-32">
           <SectionCurve fill="text-paper" />
@@ -291,9 +219,9 @@ export default function HomePage() {
                   />
                 </div>
                 <p className="max-w-xl text-base leading-[1.85] text-muted-foreground lg:pt-3">
-                  Three homes drawn, engineered, built and furnished end to end.
-                  Each one was handed over by the same team that put the first
-                  line on paper.
+                  Three expressions of home — landscaped residences, a garden
+                  courtyard and a contemporary facade. Explore the details
+                  that give each its own character.
                 </p>
               </div>
             </Reveal>
@@ -341,9 +269,9 @@ export default function HomePage() {
                 <Link href="/projects" className="group block lg:mt-[4.5rem]">
                   <div className="flex aspect-[4/5] w-full flex-col justify-between rounded-[1.25rem] border border-border bg-background p-5 transition-colors duration-500 group-hover:border-foreground/25">
                     <span>
-                      <span className="numeral block text-4xl text-accent">50+</span>
+                      <ArrowRight className="size-9 text-accent" aria-hidden="true" />
                       <span className="mt-2 block text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                        Projects delivered
+                        Explore our portfolio
                       </span>
                     </span>
                     <span>
@@ -386,31 +314,32 @@ export default function HomePage() {
               </div>
             </Reveal>
 
-            <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+            <div className="grid gap-8 sm:grid-cols-2 lg:gap-x-10 lg:gap-y-14">
               {INTERIORS.map((img, i) => (
                 <Reveal key={img.src} delay={i * 0.06}>
                   <div
-                    className={`relative w-full overflow-hidden rounded-[1.25rem] ${i % 2 === 0 ? "aspect-[3/4]" : "aspect-[3/4] lg:mt-10"}`}
+                    className={`relative w-full overflow-hidden rounded-[1.25rem] ${i % 2 === 0 ? "aspect-[4/3]" : "aspect-[4/3] lg:mt-12"}`}
                   >
                     <RevealImage
                       src={img.src}
                       alt={img.alt}
-                      sizes="(max-width: 1024px) 50vw, 25vw"
+                      sizes="(max-width: 640px) 100vw, 50vw"
                       className="absolute inset-0"
                       imageClassName="transition-transform duration-[1.1s] ease-out hover:scale-[1.05]"
                     />
                   </div>
+                  <p className="mt-4 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">{img.alt}</p>
                 </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── PHILOSOPHY — full-bleed still from the hero film ───────── */}
+        {/* ── PHILOSOPHY — full-bleed garden at dusk ───────── */}
         <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-foreground">
           <RevealImage
-            src="/images/story/balcony.webp"
-            alt="Balcony of the lakeside residence — travertine, bronze and glass"
+            src="/images/portfolio/night-garden.webp"
+            alt="Courtyard garden illuminated at night"
             sizes="100vw"
             className="absolute inset-0"
             hover={false}
@@ -437,47 +366,6 @@ export default function HomePage() {
                 />
               </div>
             </Reveal>
-          </div>
-        </section>
-
-        {/* ── TESTIMONIALS ────────────────────────────────────────── */}
-        <section className="relative bg-background py-24 lg:py-32">
-          <SectionCurve fill="text-background" />
-          <div className="mx-auto max-w-7xl px-6 lg:px-10">
-            <Reveal>
-              <div className="mb-14 text-center">
-                <p className="eyebrow mb-6 text-accent-ink">Clients</p>
-                <SplitText
-                  as="h2"
-                  text="Trusted by fifty families"
-                  className="display-wide"
-                  style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
-                />
-              </div>
-            </Reveal>
-
-            <div className="grid gap-6 md:grid-cols-3">
-              {TESTIMONIALS.map((t, i) => (
-                <Reveal key={t.name} delay={i * 0.08}>
-                  <Card className="h-full">
-                    <CardContent className="p-8">
-                      <div className="mb-5 text-xs tracking-[0.3em] text-accent">
-                        ★★★★★
-                      </div>
-                      <p className="font-display text-lg leading-relaxed">
-                        &ldquo;{t.text}&rdquo;
-                      </p>
-                      <div className="mt-7 border-t border-border pt-5">
-                        <div className="text-sm font-medium">{t.name}</div>
-                        <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                          {t.project}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Reveal>
-              ))}
-            </div>
           </div>
         </section>
 

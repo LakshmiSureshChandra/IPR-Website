@@ -10,7 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export const metadata: Metadata = {
   title: "About IPR Architects | Luxury Design-Build Firm in Hyderabad",
   description:
-    "IPR Architects — Hyderabad's premier integrated design-build firm. 6 years, 50+ projects, 4 disciplines under one roof. Meet the team behind the city's finest residences.",
+    "IPR Architects — Hyderabad's premier integrated design-build firm. 6 years, 4 disciplines under one roof. Meet the team behind the city's finest residences.",
   alternates: { canonical: "/about" },
 };
 
@@ -23,9 +23,7 @@ const VALUES = [
 
 
 const STATS = [
-  { v: "50+", l: "Projects" },
   { v: "6", l: "Years" },
-  { v: "50+", l: "Happy Clients" },
   { v: "4", l: "Disciplines" },
 ];
 
@@ -34,7 +32,7 @@ export default function AboutPage() {
     <>
       {/* ── HERO ── */}
       <section className="relative flex h-[70vh] min-h-[440px] items-end overflow-hidden bg-foreground">
-        <RevealImage src="/images/renders/project-2-exterior.webp" alt="IPR Architects — Hyderabad design-build studio" sizes="100vw" className="absolute inset-0" priority />
+        <RevealImage src="/images/portfolio/villa-avenue.webp" alt="IPR Architects — Hyderabad design-build studio" sizes="100vw" className="absolute inset-0" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 lg:px-10">
           <p className="eyebrow mb-6 text-white/70">About</p>
@@ -57,7 +55,7 @@ export default function AboutPage() {
                     landscaped home without ever passing the baton to a third party.
                   </p>
                   <p>
-                    Over six years and 50+ projects, that belief has proved itself. Our clients — from IT executives and
+                    Over six years, that belief has shaped our work. Our clients — from IT executives and
                     NRIs to industrialists — return to us for their next home, and refer us to their family, because we
                     deliver what we promise.
                   </p>
@@ -81,7 +79,7 @@ export default function AboutPage() {
                   ))}
                 </div>
                 <div className="relative mt-6 aspect-video w-full overflow-hidden">
-                  <RevealImage src="/images/renders/interior-living.webp" alt="IPR Architects interior work" sizes="(max-width: 1024px) 100vw, 50vw" className="absolute inset-0" />
+                  <RevealImage src="/images/portfolio/garden-lounge.webp" alt="IPR Architects interior work" sizes="(max-width: 1024px) 100vw, 50vw" className="absolute inset-0" />
                 </div>
               </div>
             </Reveal>
@@ -116,14 +114,14 @@ export default function AboutPage() {
 
       {/* ── GALLERY ── */}
       <section className="bg-background py-4">
-        <div className="grid grid-cols-3 gap-4 px-4">
+        <div className="grid gap-4 px-4 sm:grid-cols-3">
           {[
-            { src: "/images/renders/arch-exterior-3.webp", alt: "Architecture project by IPR" },
-            { src: "/images/renders/interior-drawing-room.webp", alt: "Interior design project by IPR" },
-            { src: "/images/renders/landscape-3.webp", alt: "Landscape design project by IPR" },
+            { src: "/images/portfolio/cantilever-residence.webp", alt: "Architecture project by IPR" },
+            { src: "/images/portfolio/rose-salon.webp", alt: "Interior design project by IPR" },
+            { src: "/images/portfolio/resort-landscape.webp", alt: "Landscape design project by IPR" },
           ].map((img) => (
             <div key={img.src} className="relative aspect-[4/3] w-full overflow-hidden">
-              <RevealImage src={img.src} alt={img.alt} sizes="33vw" className="absolute inset-0" />
+              <RevealImage src={img.src} alt={img.alt} sizes="(max-width: 640px) 100vw, 33vw" className="absolute inset-0" />
             </div>
           ))}
         </div>

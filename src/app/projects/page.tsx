@@ -24,15 +24,15 @@ export default function ProjectsPage() {
               <p className="eyebrow mb-6 text-accent-ink">Portfolio</p>
               <SplitText
                 as="h1"
-                text="Every project"
+                text="Spaces with character"
                 className="display-wide"
                 style={{ fontSize: "clamp(1.9rem, 4.4vw, 3.4rem)" }}
               />
             </div>
             <p className="max-w-xl text-base leading-[1.85] text-muted-foreground lg:pt-3">
-              50+ delivered across Hyderabad, from intimate apartments to sprawling
-              villas and commercial landmarks. Filter by the discipline you need —
-              most of these ran on more than one.
+              Explore our architecture, interiors and landscapes through a curated
+              collection of views — from the first impression to the finest
+              detail. Filter by the discipline you have in mind.
             </p>
           </div>
         </div>
