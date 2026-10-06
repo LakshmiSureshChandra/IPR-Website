@@ -22,13 +22,13 @@ export default function Footer() {
   return (
     <footer className="relative bg-foreground text-background">
       <SectionCurve fill="text-foreground" />
-      {/* Closing invitation — the last thing on every page is a way in. */}
+      {/* Closing invitation - the last thing on every page is a way in. */}
       <div className="mx-auto max-w-7xl px-6 pb-16 pt-24 lg:px-10 lg:pt-32">
         <div className="grid items-end gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)]">
           <h2 className="font-display leading-[0.98] tracking-[-0.02em]" style={{ fontSize: "clamp(2rem, 3.9vw, 3.6rem)" }}>
-            Let&apos;s draw
+            Planning to build
             <br />
-            <span className="italic font-normal">something worth building.</span>
+            <span className="italic font-normal">in Hyderabad?</span>
           </h2>
           <div className="flex flex-wrap gap-3 lg:justify-end">
             <Button asChild size="lg" variant="light">
@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Image src="/images/logo/logo-gold.png" alt="IPR Architects" width={220} height={220} className="mb-6 h-16 w-auto object-contain" />
             <p className="max-w-xs text-sm leading-relaxed text-background/55">
-              Hyderabad&apos;s design-build studio. Architecture, interiors, construction and landscape under one roof.
+              Architects and builders in Hyderabad. Architecture, interiors, construction and landscaping.
             </p>
             <a
               href="https://share.google/7ICsBQ0BCliwJRNGy"
@@ -78,11 +78,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <a href="#" className="inline-flex items-center gap-1 text-sm text-background/75 transition-colors hover:text-background">
-                  Instagram <ArrowUpRight className="size-3.5" />
-                </a>
-              </li>
             </ul>
           </div>
 

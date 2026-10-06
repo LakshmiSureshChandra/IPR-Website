@@ -3,7 +3,7 @@ import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-/* Pills, sentence case, ink-first. The old brass fill is gone — `accent` is
+/* Pills, sentence case, ink-first. The old brass fill is gone - `accent` is
    kept as a variant name so call sites don't change, but it renders as ink. */
 const buttonVariants = cva(
   [

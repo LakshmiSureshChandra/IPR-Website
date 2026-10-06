@@ -1,4 +1,4 @@
-/** Curated image collections from the supplied website folder. */
+/** Projects shown on the portfolio page. */
 export interface Project {
   slug: string;
   title: string;
@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
       "/images/portfolio/water-garden.webp",
       "/images/portfolio/garden-arrival.webp"
     ],
-    "blurb": "A low-slung home wrapped around water. Deep rooflines, open terraces and planted edges make the garden part of every room."
+    "blurb": "A low villa built around a pool, with deep roofs, open terraces and planting right up to the house."
   },
   {
     "slug": "residential-architecture",
@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
       "/images/portfolio/terraced-residences.webp",
       "/images/portfolio/villa-avenue.webp"
     ],
-    "blurb": "Sculpted contemporary elevations, planted terraces and generous entrances explore arrival, proportion and the spaces between homes."
+    "blurb": "Contemporary houses with planted terraces and generous entrances."
   },
   {
     "slug": "urban-architecture",
@@ -53,11 +53,11 @@ export const PROJECTS: Project[] = [
     ],
     "image": "/images/portfolio/urban-residence.webp",
     "subs": [],
-    "blurb": "Layered facades, shaded balconies and strong street presence bring a considered rhythm to larger buildings."
+    "blurb": "A layered facade with shaded balconies, built for a busy street."
   },
   {
     "slug": "landscape",
-    "title": "Gardens After Hours",
+    "title": "Landscape",
     "services": [
       "Landscaping"
     ],
@@ -65,11 +65,11 @@ export const PROJECTS: Project[] = [
     "subs": [
       "/images/portfolio/night-garden.webp"
     ],
-    "blurb": "Water, planting and warm pools of light create places to pause, from quiet courtyards to gardens designed for gathering."
+    "blurb": "Courtyards and gardens with water, planting and soft lighting for the evening."
   },
   {
     "slug": "living-spaces",
-    "title": "The Art of Living",
+    "title": "Living Spaces",
     "services": [
       "Interior Design"
     ],
@@ -79,11 +79,11 @@ export const PROJECTS: Project[] = [
       "/images/portfolio/panoramic-lounge.webp",
       "/images/portfolio/sculptural-lounge.webp"
     ],
-    "blurb": "Rich timber, textured stone and generous seating. Living spaces composed around conversation and comfort."
+    "blurb": "Living rooms in timber and stone with plenty of seating."
   },
   {
     "slug": "soft-interiors",
-    "title": "Light & Softness",
+    "title": "Lounges and Drawing Rooms",
     "services": [
       "Interior Design"
     ],
@@ -95,11 +95,11 @@ export const PROJECTS: Project[] = [
       "/images/portfolio/marble-living.webp",
       "/images/portfolio/marble-tv-wall.webp"
     ],
-    "blurb": "A lighter palette of warm neutrals, soft fabrics and polished details, shaped by natural light."
+    "blurb": "Lighter rooms with warm neutrals, soft fabrics and a lot of daylight."
   },
   {
     "slug": "bedrooms",
-    "title": "Private Retreats",
+    "title": "Bedrooms",
     "services": [
       "Interior Design"
     ],
@@ -112,7 +112,7 @@ export const PROJECTS: Project[] = [
       "/images/portfolio/charcoal-suite.webp",
       "/images/portfolio/stone-suite.webp"
     ],
-    "blurb": "Bedrooms that balance quiet materials with thoughtful storage, layered lighting and a sense of retreat."
+    "blurb": "Bedroom suites with fitted storage and layered lighting."
   },
   {
     "slug": "private-cinema",
@@ -127,11 +127,11 @@ export const PROJECTS: Project[] = [
       "/images/portfolio/cinema-panelling.webp",
       "/images/portfolio/cinema-lighting.webp"
     ],
-    "blurb": "Deep reclining seats, timber panelling and low, atmospheric light turn a room into a cinema experience."
+    "blurb": "A home cinema with deep recliners, timber panelling and low lighting."
   },
   {
     "slug": "study-media",
-    "title": "Work & Unwind",
+    "title": "Study and Media Room",
     "services": [
       "Interior Design"
     ],
@@ -140,6 +140,6 @@ export const PROJECTS: Project[] = [
       "/images/portfolio/media-wall.webp",
       "/images/portfolio/media-lounge.webp"
     ],
-    "blurb": "Considered joinery gives work, collections and entertainment a place of their own."
+    "blurb": "A study and media room with fitted joinery for books, collections and the TV."
   }
 ];

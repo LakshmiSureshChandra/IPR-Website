@@ -33,7 +33,7 @@ export default function Hero() {
             two-thirds of the frame stay completely untouched. */}
         <div className="hero-scrim-mobile pointer-events-none absolute inset-0 z-10" />
 
-        {/* Dissolve into the next section — the hero bottom edge IS the page
+        {/* Dissolve into the next section - the hero bottom edge IS the page
             background, so there is no seam to notice when the pin releases. */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 hidden h-32 bg-gradient-to-t from-background to-transparent lg:block" />
 
@@ -126,8 +126,8 @@ function FrameCanvas({ progress }: { progress: MotionValue<number> }) {
     };
 
     // First frame eagerly so the hero paints immediately. The rest load
-    // coarse-to-fine — every 16th frame, then every 8th, 4th, 2nd, then the
-    // remainder — so an early scrub already has even coverage across the whole
+    // coarse-to-fine - every 16th frame, then every 8th, 4th, 2nd, then the
+    // remainder - so an early scrub already has even coverage across the whole
     // sequence instead of a dense start and nothing past it.
     measure();
     load(0);
@@ -167,7 +167,7 @@ function FrameCanvas({ progress }: { progress: MotionValue<number> }) {
   return <canvas ref={canvasRef} className="absolute inset-0 block h-full w-full" />;
 }
 
-/* The finished building is what a visitor should meet first — the film then
+/* The finished building is what a visitor should meet first - the film then
    rewinds to the drawing. A real <Image> so it is the LCP, not a canvas that
    waits on frame 0. */
 function RestStill({ progress }: { progress: MotionValue<number> }) {
@@ -191,7 +191,7 @@ function RestStill({ progress }: { progress: MotionValue<number> }) {
 
 /* Clears out BEFORE the incoming page reaches it. The overlap starts biting at
    roughly 0.96 of the scrub (hero 500vh, next block pulled up 20vh), so this has
-   to be finished by then — otherwise the rising section slices the CTA row and
+   to be finished by then - otherwise the rising section slices the CTA row and
    leaves a stray brass sliver on screen. */
 function Copy({ progress }: { progress: MotionValue<number> }) {
   const opacity = useTransform(progress, [0, 0.9, 0.96, 1], [1, 1, 0, 0]);
@@ -212,7 +212,7 @@ function Copy({ progress }: { progress: MotionValue<number> }) {
 function Masthead({ progress }: { progress: MotionValue<number> }) {
   // Scale only, anchored bottom-left. It used to drift up 60px as well, but the
   // CTA row underneath does not move, so that drift just opened a widening gap
-  // between them — 48px at rest, 108px by the end of the scrub. Scaling from
+  // between them - 48px at rest, 108px by the end of the scrub. Scaling from
   // the bottom edge keeps the masthead a fixed distance above the buttons.
   const scale = useTransform(progress, [0, 0.2, 1], [1, 0.78, 0.78]);
   return (
@@ -232,7 +232,7 @@ function Masthead({ progress }: { progress: MotionValue<number> }) {
 
 function Actions() {
   return (
-    // Kept to one row on a phone — two size-lg pills overflow 390px, and the
+    // Kept to one row on a phone - two size-lg pills overflow 390px, and the
     // wrap pushes the whole copy block up out of the scrim.
     <div className="mt-10 flex flex-wrap gap-2.5 lg:mt-12 lg:gap-3">
       <Button asChild size="lg" variant="accent" className="h-12 bg-background px-5 text-[12px] text-foreground hover:bg-white lg:h-14 lg:bg-foreground lg:px-8 lg:text-[14px] lg:text-background lg:hover:bg-foreground/85">

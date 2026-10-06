@@ -6,7 +6,7 @@ export default function SmoothScroll() {
   /* Land at the top on refresh.
      Browsers restore the previous scroll offset on reload, which on the home
      page drops you into the middle of the hero's build sequence. Opting out of
-     scrollRestoration is what actually prevents it — a scrollTo alone races the
+     scrollRestoration is what actually prevents it - a scrollTo alone races the
      browser's own restore and loses. This component lives in the root layout and
      mounts once per full page load, so client-side navigations are unaffected.
      A #hash in the URL is a deliberate target and still wins. */

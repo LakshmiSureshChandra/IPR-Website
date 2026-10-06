@@ -27,11 +27,11 @@ const archivo = Archivo({
 
 export const metadata: Metadata = {
   title: {
-    default: "IPR Architects | Luxury Architecture, Interiors & Construction in Hyderabad",
+    default: "IPR Architects | Architects, Builders and Interior Designers in Hyderabad",
     template: "%s | IPR Architects Hyderabad",
   },
   description:
-    "IPR Architects — Hyderabad's premier design-build firm offering end-to-end Architecture, Interior Design, Construction & Landscaping. Villas, bungalows, commercial spaces. Contact us for a free consultation.",
+    "IPR Architects is a design-build firm in Hyderabad. We do architecture, interior design, construction and landscaping for villas, apartments and commercial buildings.",
   keywords: [
     "architects in Hyderabad",
     "interior designers Hyderabad",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "architecture firm Hyderabad",
     "landscaping Hyderabad",
     "IPR Architects",
-    "best architects Telangana",
+    "architects in Telangana",
     "home construction Hyderabad",
   ],
   authors: [{ name: "IPR Architects" }],
@@ -52,15 +52,15 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://iprarchitects.in",
     siteName: "IPR Architects",
-    title: "IPR Architects | Luxury Architecture, Interiors & Construction in Hyderabad",
+    title: "IPR Architects | Architects, Builders and Interior Designers in Hyderabad",
     description:
-      "End-to-end design-build: Architecture, Interior Design, Construction & Landscaping. Hyderabad's choice for luxury residences and commercial spaces.",
-    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "IPR Architects — Hyderabad" }],
+      "Architecture, interior design, construction and landscaping in Hyderabad, from one team.",
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: "IPR Architects, Hyderabad" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "IPR Architects Hyderabad",
-    description: "Architecture | Interiors | Landscaping | Construction — Hyderabad",
+    description: "Architecture, interiors, construction and landscaping in Hyderabad",
     images: ["/images/og-image.jpg"],
   },
   robots: {

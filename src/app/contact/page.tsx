@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import SplitText from "@/components/anim/SplitText";
 import Footer from "@/components/Footer";
 import LeadForm from "@/components/LeadForm";
-import { Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Mail, MapPin, MessageCircle } from "lucide-react";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Contact IPR Architects | Free Consultation — Hyderabad",
+  title: "Contact us",
   description:
-    "Contact IPR Architects for architecture, interior design, construction and landscaping services in Hyderabad. Message us on WhatsApp or fill in the form for a free consultation.",
+    "Contact IPR Architects in Hyderabad about architecture, interior design, construction or landscaping. Message us on WhatsApp or fill in the form.",
   alternates: { canonical: "/contact" },
 };
 
@@ -48,10 +48,10 @@ export default function ContactPage() {
       {/* ── HEADER ── */}
       <section className="border-b border-border bg-background pb-16 pt-36 lg:pt-44">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <p className="eyebrow mb-6 text-accent-ink">Reach Out</p>
-          <SplitText as="h1" text="Let's create together" className="display-wide" style={{ fontSize: "clamp(1.9rem, 4.4vw, 3.4rem)" }} />
+          <p className="eyebrow mb-6 text-accent-ink">Contact</p>
+          <SplitText as="h1" text="Get in touch" className="display-wide" style={{ fontSize: "clamp(1.9rem, 4.4vw, 3.4rem)" }} />
           <p className="mt-7 max-w-xl text-base leading-[1.85] text-muted-foreground">
-            Tell us about your project — we&apos;ll respond within 24 hours with an initial assessment and next steps.
+            Message us on WhatsApp, or fill in the form and tell us about your plot or project.
           </p>
         </div>
       </section>
@@ -70,10 +70,10 @@ export default function ContactPage() {
             <div className="space-y-10">
               <div className="border border-[#25D366]/30 bg-[#25D366]/6 p-7">
                 <h3 className="flex items-center gap-2.5 text-sm font-medium">
-                  <MessageCircle className="size-4 text-[#1da851]" /> WhatsApp — fastest response
+                  <MessageCircle className="size-4 text-[#1da851]" /> WhatsApp
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  Chat directly with our team. We typically respond within 1–2 hours during business hours.
+                  Message us directly. It is the quickest way to reach us.
                 </p>
                 <Button asChild size="sm" className="mt-6 bg-[#25D366] text-white hover:bg-[#1da851]">
                   <a href={getWhatsAppLink("contact")} target="_blank" rel="noopener noreferrer">
@@ -105,18 +105,13 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="mt-3 inline-block text-[10px] uppercase tracking-[0.22em] text-accent-ink hover:underline"
                   >
-                    Get Directions →
+                    Get directions
                   </a>
-                </ContactRow>
-
-                <ContactRow icon={<Clock className="size-4 text-accent" />} label="Working Hours">
-                  Monday – Saturday: 10:00 AM – 7:00 PM
-                  <span className="mt-1 block text-xs text-muted-foreground">Sunday by appointment</span>
                 </ContactRow>
               </div>
 
               <div>
-                <h3 className="eyebrow mb-5 text-accent-ink">Consult for a specific service</h3>
+                <h3 className="eyebrow mb-5 text-accent-ink">Ask about a specific service</h3>
                 <div className="grid grid-cols-2 gap-3">
                   {SERVICE_LINKS.map((s) => (
                     <Button key={s.label} asChild variant="outline" size="sm">
@@ -142,7 +137,7 @@ export default function ContactPage() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="IPR Architects Office — Nallagandla, Hyderabad"
+          title="IPR Architects office, Nallagandla, Hyderabad"
         />
       </section>
 

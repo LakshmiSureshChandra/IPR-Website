@@ -32,6 +32,6 @@ ffmpeg -v error -i "$SRC" \
   "$OUT/frame_%03d.webp"
 
 ACTUAL=$(find "$OUT" -name 'frame_*.webp' | wc -l | tr -d ' ')
-echo "$ACTUAL frames → $OUT ($(du -sh "$OUT" | cut -f1))"
+echo "$ACTUAL frames in $OUT ($(du -sh "$OUT" | cut -f1))"
 echo "Set HERO_FRAME_COUNT in src/lib/media.ts to $ACTUAL"
 echo "(phones load the -sm set; regenerate both when the film changes)"

@@ -71,7 +71,7 @@ export default function ProjectsList() {
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.5rem] bg-paper-2">
                   <Image
                     src={selected}
-                    alt={`${p.title} — view ${images.indexOf(selected) + 1}`}
+                    alt={`${p.title}, view ${images.indexOf(selected) + 1}`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 58vw"
                     className="object-contain"

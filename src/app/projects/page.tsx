@@ -7,9 +7,9 @@ import Reveal from "@/components/Reveal";
 import SectionCurve from "@/components/SectionCurve";
 
 export const metadata: Metadata = {
-  title: "Portfolio — Architecture, Interiors & Construction Projects in Hyderabad | IPR Architects",
+  title: "Projects",
   description:
-    "Explore IPR Architects' portfolio of luxury villas, residences and commercial spaces across Hyderabad — architecture, interior design, construction and landscaping, filterable by discipline.",
+    "Villas, apartments, interiors and landscape work by IPR Architects in Hyderabad. Filter by architecture, construction, interior design or landscaping.",
   alternates: { canonical: "/projects" },
 };
 
@@ -21,18 +21,17 @@ export default function ProjectsPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
             <div>
-              <p className="eyebrow mb-6 text-accent-ink">Portfolio</p>
+              <p className="eyebrow mb-6 text-accent-ink">Projects</p>
               <SplitText
                 as="h1"
-                text="Spaces with character"
+                text="Our projects"
                 className="display-wide"
                 style={{ fontSize: "clamp(1.9rem, 4.4vw, 3.4rem)" }}
               />
             </div>
             <p className="max-w-xl text-base leading-[1.85] text-muted-foreground lg:pt-3">
-              Explore our architecture, interiors and landscapes through a curated
-              collection of views — from the first impression to the finest
-              detail. Filter by the discipline you have in mind.
+              Architecture, interiors and landscape work from our studio. Use
+              the filters to see one service at a time.
             </p>
           </div>
         </div>
@@ -52,15 +51,15 @@ export default function ProjectsPage() {
           <Reveal>
             <SplitText
               as="h2"
-              text="Your project could be next"
+              text="Have a project in mind?"
               className="display-wide"
               style={{ fontSize: "clamp(1.6rem, 3.4vw, 2.6rem)" }}
             />
             <p className="mx-auto mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
-              Share your brief and let&apos;s create something remarkable together in Hyderabad.
+              Send us a message and tell us what you want to build.
             </p>
             <div className="mt-10">
-              <CTAButton source="projects" label="Start a Conversation" size="lg" />
+              <CTAButton source="projects" label="Message us" size="lg" />
             </div>
           </Reveal>
         </div>

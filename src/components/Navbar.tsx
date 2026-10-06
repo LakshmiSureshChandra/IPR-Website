@@ -28,7 +28,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  // The home hero is light footage, so only the bar background changes here —
+  // The home hero is light footage, so only the bar background changes here:
   // type and logo keep their normal dark treatment over it.
   const atHomeTop = pathname === "/" && !scrolled;
 
@@ -42,7 +42,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 lg:px-6 lg:pt-5">
       {/* Floating capsule. Transparent over the hero, then a frosted pill once
-          the page is moving — the bar never spans edge to edge. */}
+          the page is moving - the bar never spans edge to edge. */}
       <nav
         className={cn(
           "mx-auto flex max-w-7xl items-center justify-between rounded-full px-5 transition-[background-color,border-color,box-shadow,height,backdrop-filter] duration-500 lg:px-7",
@@ -51,9 +51,9 @@ export default function Navbar() {
             : "h-16 border border-foreground/[0.07] bg-background/75 shadow-[0_18px_50px_-30px_rgba(17,17,16,0.45)] backdrop-blur-xl"
         )}
       >
-        <Link href="/" className="flex shrink-0 items-center" aria-label="IPR Architects — home">
+        <Link href="/" className="flex shrink-0 items-center" aria-label="IPR Architects home">
           {/* The monogram art is square (1087x1087) with ~14% transparent
-              padding top and bottom, so the declared box must be square too —
+              padding top and bottom, so the declared box must be square too:
               a wordmark aspect here squashes it. */}
           <Image
             src="/images/logo/logo-gold.png"

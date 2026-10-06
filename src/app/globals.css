@@ -4,12 +4,12 @@
 :root {
   --radius: 1rem;
 
-  /* Warm white ground, near-black ink. Not pure #fff — the film and renders
+  /* Warm white ground, near-black ink. Not pure #fff - the film and renders
      are warm, and a cold white next to them reads cheap. */
   --background: #fbfaf7;
   --foreground: #111110;
 
-  /* stone — alternating section surface */
+  /* stone - alternating section surface */
   --paper: #f3f1ec;
   --paper-2: #e9e6df;
 
@@ -27,7 +27,7 @@
   --muted: #f3f1ec;
   --muted-foreground: #6b675f;
 
-  /* stone-bronze — a quiet accent that lives in the travertine, not a gold.
+  /* stone-bronze - a quiet accent that lives in the travertine, not a gold.
      Used for numerals, eyebrows and hairlines only; buttons are ink. */
   --accent: #7d6a4f;
   --accent-foreground: #fbfaf7;
@@ -106,7 +106,7 @@ body {
 
 .font-serif { font-family: var(--font-bodoni), "Bodoni 72", Didot, Georgia, serif; }
 
-/* Big statement type — sentence-case Didone, tight and calm. */
+/* Big statement type - sentence-case Didone, tight and calm. */
 .display-wide {
   font-family: var(--font-bodoni), "Bodoni 72", Didot, Georgia, serif;
   font-optical-sizing: auto;
@@ -115,7 +115,7 @@ body {
   line-height: 1.04;
 }
 
-/* Small caps labels with a short leading rule. Grotesque, not the serif —
+/* Small caps labels with a short leading rule. Grotesque, not the serif:
    the contrast is the point. */
 .eyebrow {
   display: inline-flex;
@@ -180,7 +180,7 @@ body {
 }
 
 @media (min-width: 1024px) {
-  /* Desktop runs ink on a light wash instead — none of this applies. */
+  /* Desktop runs ink on a light wash instead - none of this applies. */
   .hero-scrim-mobile { background-image: none; }
   .hero-shadow { text-shadow: none; }
 }
@@ -189,7 +189,7 @@ body {
 
 /* Driven by CSS, not JS. The entrance used motion with delays that could only
    start once React had hydrated, so on a refresh the screen sat blank until
-   then — and the old delays ran so late that the coordinate line finished
+   then - and the old delays ran so late that the coordinate line finished
    arriving at 1.50s, the exact moment the whole group began fading out.
    CSS animations start at first paint, so the sequence is the same every
    refresh regardless of how long the bundle takes. */

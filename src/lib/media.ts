@@ -3,7 +3,7 @@
  *
  * The hero is a canvas scrubbed over a pre-decoded frame sequence, not a
  * <video>. Two sets ship: the full-width one for desktop, and a lighter one
- * phones load instead — same frame count, so slow scrolling stays smooth, but
+ * phones load instead - same frame count, so slow scrolling stays smooth, but
  * ~40% fewer bytes and far less image-decode pressure, which is what makes the
  * scrub stutter on a phone.
  *

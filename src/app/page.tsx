@@ -14,44 +14,42 @@ import RevealImage from "@/components/anim/RevealImage";
 import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
-  title:
-    "IPR Architects | Luxury Architecture, Interiors & Construction in Hyderabad",
   alternates: { canonical: "/" },
 };
 
-/* The four disciplines illustrated with the supplied portfolio. */
+/* The four services, each shown with a project photo. */
 const SERVICES = [
   {
     n: "01",
     title: "Architecture",
-    desc: "Concept, approvals and working drawings — the plan that everything else is built from.",
+    desc: "Plans, elevations and the working drawings your builder needs.",
     id: "architecture",
     image: "/images/portfolio/cantilever-residence.webp",
   },
   {
     n: "02",
     title: "Construction",
-    desc: "Turnkey delivery with in-house engineering, fixed-cost contracts and on-time handover.",
+    desc: "We build what we design, and run the site from foundation to handover.",
     id: "construction",
     image: "/images/portfolio/urban-residence.webp",
   },
   {
     n: "03",
     title: "Landscaping",
-    desc: "Pool, terrace, garden and boulder — the site composed with the same rigour as the building.",
+    desc: "Gardens, pools and courtyards planned together with the building.",
     id: "landscaping",
     image: "/images/portfolio/resort-landscape.webp",
   },
   {
     n: "04",
     title: "Interior Design",
-    desc: "Joinery, stone and light — every surface specified before the first wall goes up.",
+    desc: "Furniture, joinery, lighting and finishes planned with the architecture.",
     id: "interior-design",
     image: "/images/portfolio/contemporary-salon.webp",
   },
 ];
 
-/* Each card sits a little lower than the last — a cascade across the row. */
+/* Each card sits a little lower than the last - a cascade across the row. */
 const PROJECT_STEP = ["", "lg:mt-6", "lg:mt-12", "lg:mt-[4.5rem]"];
 
 const PROJECTS = [
@@ -99,7 +97,7 @@ const SCHEMA = {
   "@type": "ArchitectFirm",
   name: "IPR Architects",
   description:
-    "Hyderabad's premier design-build firm — Architecture, Interior Design, Construction, Landscaping.",
+    "Design-build firm in Hyderabad doing architecture, interior design, construction and landscaping.",
   url: "https://iprarchitects.in",
   logo: "https://iprarchitects.in/images/logo/logo-gold.png",
   email: "contact@iprarchitects.com",
@@ -129,7 +127,7 @@ export default function HomePage() {
           the page is still advancing while the build sequence finishes. */}
       <div className="relative z-10 -mt-[20vh] bg-background">
         {/* This block is opaque, so its leading edge would slice straight
-            across the tower. The hero's own bottom fade cannot help — that one
+            across the tower. The hero's own bottom fade cannot help - that one
             is pinned to the viewport bottom, and this edge travels up past it.
             So the edge carries its own fade, riding directly above itself. */}
         <div
@@ -143,18 +141,18 @@ export default function HomePage() {
             <Reveal>
               <div className="mb-16 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
                 <div>
-                  <p className="eyebrow mb-6 text-accent-ink">Drawing to Door</p>
+                  <p className="eyebrow mb-6 text-accent-ink">Services</p>
                   <SplitText
                     as="h2"
-                    text="One studio, four disciplines"
+                    text="Four services, one team"
                     className="display-wide"
                     style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
                   />
                 </div>
                 <p className="max-w-xl text-base leading-[1.85] text-muted-foreground lg:pt-3">
-                  The film above is how every IPR project actually runs — the
-                  same team draws the plan, pours the frame, plants the garden
-                  and fits the joinery. Nothing is handed off.
+                  The film above shows how a project runs with us. The same
+                  team draws the plans, builds the structure, lays out the
+                  garden and fits out the interior.
                 </p>
               </div>
             </Reveal>
@@ -210,18 +208,17 @@ export default function HomePage() {
             <Reveal>
               <div className="mb-14 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
                 <div>
-                  <p className="eyebrow mb-6 text-accent-ink">Selected Work</p>
+                  <p className="eyebrow mb-6 text-accent-ink">Projects</p>
                   <SplitText
                     as="h2"
-                    text="Signature Projects"
+                    text="Selected work"
                     className="display-wide"
                     style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
                   />
                 </div>
                 <p className="max-w-xl text-base leading-[1.85] text-muted-foreground lg:pt-3">
-                  Three expressions of home — landscaped residences, a garden
-                  courtyard and a contemporary facade. Explore the details
-                  that give each its own character.
+                  A few of our residential projects. The projects page has
+                  the full set, with more photos of each.
                 </p>
               </div>
             </Reveal>
@@ -271,12 +268,12 @@ export default function HomePage() {
                     <span>
                       <ArrowRight className="size-9 text-accent" aria-hidden="true" />
                       <span className="mt-2 block text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                        Explore our portfolio
+                        Portfolio
                       </span>
                     </span>
                     <span>
                       <span className="block font-display text-base leading-snug">
-                        Every project, in one place
+                        See all our projects
                       </span>
                       <span className="mt-3 inline-flex items-center gap-2 text-[12px] font-medium">
                         All projects
@@ -298,18 +295,17 @@ export default function HomePage() {
             <Reveal>
               <div className="mb-14 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
                 <div>
-                  <p className="eyebrow mb-6 text-accent-ink">Inside</p>
+                  <p className="eyebrow mb-6 text-accent-ink">Interior design</p>
                   <SplitText
                     as="h2"
-                    text="Interiors, Resolved"
+                    text="Interiors"
                     className="display-wide"
                     style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
                   />
                 </div>
                 <p className="max-w-xl text-base leading-[1.85] text-muted-foreground lg:pt-3">
-                  Joinery, lighting, stone and soft furnishing specified during
-                  design — not after handover. Every material you see was
-                  selected, costed and approved before the first wall went up.
+                  A few of the interiors we have designed: living rooms,
+                  bedrooms, a study and a private cinema.
                 </p>
               </div>
             </Reveal>
@@ -335,7 +331,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── PHILOSOPHY — full-bleed garden at dusk ───────── */}
+        {/* ── PHILOSOPHY - full-bleed garden at dusk ───────── */}
         <section className="relative flex min-h-[80vh] items-center overflow-hidden bg-foreground">
           <RevealImage
             src="/images/portfolio/night-garden.webp"
@@ -347,19 +343,17 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/10" />
           <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-28 lg:px-10">
             <Reveal>
-              <p className="eyebrow mb-9 text-accent">The IPR Difference</p>
               <p
                 className="max-w-3xl font-display leading-[1.2] text-white"
                 style={{ fontSize: "clamp(1.7rem, 3.8vw, 3.4rem)" }}
               >
-                One team, one vision, one accountable partner — from the first
-                <span className="italic"> line on paper </span>
-                to the last light switch.
+                We design it, build it and finish it. You deal with one team
+                from the first drawing to handover.
               </p>
               <div className="mt-12">
                 <CTAButton
                   source="home"
-                  label="Talk to Our Architects"
+                  label="Message us"
                   variant="light"
                   icon="arrow"
                   size="lg"
@@ -378,7 +372,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl px-6">
             <Reveal>
               <div className="mb-12 text-center">
-                <p className="eyebrow mb-6 text-accent-ink">Begin</p>
+                <p className="eyebrow mb-6 text-accent-ink">Contact</p>
                 <SplitText
                   as="h2"
                   text="Tell us what you want to build"
@@ -386,8 +380,8 @@ export default function HomePage() {
                   style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
                 />
                 <p className="mx-auto mt-6 max-w-lg text-sm leading-relaxed text-muted-foreground">
-                  Share your brief — we respond within 24 hours. No commitment,
-                  just a conversation about your vision.
+                  Send a few details about your plot or project and we will
+                  reply on WhatsApp.
                 </p>
               </div>
             </Reveal>

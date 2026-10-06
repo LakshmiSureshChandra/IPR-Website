@@ -16,7 +16,7 @@ const MESSAGES: Record<LeadSource, string> = {
   construction:     "Hi IPR Architects! I'm looking for Construction services for my project. Please get in touch with me.",
   "interior-design":"Hi IPR Architects! I'm interested in Interior Design services. Looking forward to hearing from you.",
   landscaping:      "Hi IPR Architects! I'd like to explore Landscaping options for my property. Please contact me.",
-  projects:         "Hi IPR Architects! I saw your portfolio and I'm impressed. I'd like to discuss a project.",
+  projects:         "Hi IPR Architects! I saw your projects and would like to talk about mine.",
   contact:          "Hi IPR Architects! I'd like to get in touch about your services.",
   "floating-button":"Hi IPR Architects! I'm interested in your services. Can we connect?",
 };

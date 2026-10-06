@@ -16,7 +16,7 @@ const SERVICES = [
   "Other / Not Sure",
 ];
 
-const BUDGETS = ["Under ₹30 Lakhs", "₹30L – ₹75L", "₹75L – ₹1.5 Cr", "₹1.5 Cr – ₹3 Cr", "₹3 Cr – ₹5 Cr", "₹5 Cr+"];
+const BUDGETS = ["Under ₹30 Lakhs", "₹30L to ₹75L", "₹75L to ₹1.5 Cr", "₹1.5 Cr to ₹3 Cr", "₹3 Cr to ₹5 Cr", "₹5 Cr+"];
 
 interface Props {
   source: LeadSource;
@@ -48,10 +48,10 @@ export default function LeadForm({ source, defaultService }: Props) {
       `Hi IPR Architects! I'd like to get in touch.\n\n` +
         `Name: ${form.name}\n` +
         `Phone: ${form.phone}\n` +
-        `Email: ${form.email || "—"}\n` +
+        `Email: ${form.email || "Not given"}\n` +
         `Service: ${form.service}\n` +
-        `Budget: ${form.budget || "—"}\n` +
-        `Message: ${form.message || "—"}\n\n` +
+        `Budget: ${form.budget || "Not given"}\n` +
+        `Message: ${form.message || "Not given"}\n\n` +
         `[Source: ${source}]`
     );
 
@@ -68,7 +68,7 @@ export default function LeadForm({ source, defaultService }: Props) {
         </div>
         <h3 className="font-display text-2xl">WhatsApp is opening…</h3>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-          Your details are pre-filled. Send the message and our team will respond within 24 hours.
+          Your details are filled in. Press send in WhatsApp to message us.
         </p>
       </div>
     );
@@ -79,17 +79,17 @@ export default function LeadForm({ source, defaultService }: Props) {
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
           <Label htmlFor="lf-name">Your Name *</Label>
-          <Input id="lf-name" required value={form.name} onChange={set("name")} placeholder="Ravi Kumar" />
+          <Input id="lf-name" required value={form.name} onChange={set("name")} placeholder="Your name" />
         </div>
         <div>
           <Label htmlFor="lf-phone">Phone Number *</Label>
-          <Input id="lf-phone" required type="tel" value={form.phone} onChange={set("phone")} placeholder="+91 98765 43210" />
+          <Input id="lf-phone" required type="tel" value={form.phone} onChange={set("phone")} placeholder="Phone number" />
         </div>
       </div>
 
       <div>
         <Label htmlFor="lf-email">Email Address</Label>
-        <Input id="lf-email" type="email" value={form.email} onChange={set("email")} placeholder="ravi@email.com" />
+        <Input id="lf-email" type="email" value={form.email} onChange={set("email")} placeholder="Email address" />
       </div>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -120,7 +120,7 @@ export default function LeadForm({ source, defaultService }: Props) {
           rows={4}
           value={form.message}
           onChange={set("message")}
-          placeholder="Tell us about your project — location, plot size, requirements…"
+          placeholder="Tell us about your project: location, plot size, what you want built"
         />
       </div>
 

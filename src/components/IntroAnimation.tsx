@@ -7,7 +7,7 @@ import Image from "next/image";
 const TOTAL_MS = 2100;
 
 /**
- * Light-theme opening wipe. Kept short on purpose — a splash screen that
+ * Light-theme opening wipe. Kept short on purpose - a splash screen that
  * outstays its welcome reads as slow, not premium.
  *
  * The animation itself lives in CSS (see "Intro wipe" in globals.css). React
