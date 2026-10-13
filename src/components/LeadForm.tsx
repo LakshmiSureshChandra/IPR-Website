@@ -16,7 +16,7 @@ const SERVICES = [
   "Other / Not Sure",
 ];
 
-const BUDGETS = ["Under ₹30 Lakhs", "₹30L to ₹75L", "₹75L to ₹1.5 Cr", "₹1.5 Cr to ₹3 Cr", "₹3 Cr to ₹5 Cr", "₹5 Cr+"];
+const BUDGETS = ["₹8L to ₹15L", "₹15L to ₹25L", "₹25L to ₹50L", "₹50L to ₹1 Cr", "₹1 Cr to ₹2 Cr", "₹2 Cr+"];
 
 interface Props {
   source: LeadSource;
