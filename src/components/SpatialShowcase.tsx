@@ -83,7 +83,7 @@ export default function SpatialShowcase() {
           ref={stageRef}
           role="group"
           aria-roledescription="carousel"
-          aria-label="Selected work"
+          aria-label="Architectural narratives"
           onPanEnd={(_, info) => {
             // A horizontal flick moves one slide. Vertical flicks fall through to
             // the page, which is what touch-action: pan-y is for.

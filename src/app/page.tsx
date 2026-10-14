@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 import Hero from "@/components/Hero";
 import CTAButton from "@/components/CTAButton";
@@ -11,7 +9,6 @@ import SectionCurve from "@/components/SectionCurve";
 import SpatialShowcase from "@/components/SpatialShowcase";
 import SplitText from "@/components/anim/SplitText";
 import RevealImage from "@/components/anim/RevealImage";
-import { Badge } from "@/components/ui/badge";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -46,30 +43,6 @@ const SERVICES = [
     desc: "Furniture, joinery, lighting and finishes planned with the architecture.",
     id: "interior-design",
     image: "/images/portfolio/contemporary-salon.webp",
-  },
-];
-
-/* Each card sits a little lower than the last - a cascade across the row. */
-const PROJECT_STEP = ["", "lg:mt-6", "lg:mt-12", "lg:mt-[4.5rem]"];
-
-const PROJECTS = [
-  {
-    title: "The Garden Residences",
-    type: "Design · Build · Interiors",
-    image: "/images/portfolio/villa-avenue.webp",
-    slug: "jubilee-hills-villa",
-  },
-  {
-    title: "The Courtyard Villa",
-    type: "Architecture · Landscape",
-    image: "/images/portfolio/pool-pavilion.webp",
-    slug: "gachibowli-villa",
-  },
-  {
-    title: "The Cantilever Residence",
-    type: "Full Design-Build",
-    image: "/images/portfolio/cantilever-residence.webp",
-    slug: "banjara-hills-residence",
   },
 ];
 
@@ -192,99 +165,27 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── SHOWCASE ────────────────────────────────────────────── */}
-        {/* Replaces the old welcome copy. The stage is full width on purpose:
-            the side cards bleed to the viewport edge on a phone, so it cannot sit
-            inside the padded container. */}
-        <section className="relative bg-paper py-24 lg:py-32">
-          <SectionCurve fill="text-paper" />
-          <SpatialShowcase />
-        </section>
-
-        {/* ── SIGNATURE PROJECTS ──────────────────────────────────── */}
+        {/* ── ARCHITECTURAL NARRATIVES ────────────────────────────── */}
+        {/* The stage is full width on purpose: the side cards bleed to the
+            viewport edge on a phone, so it cannot sit inside the padded
+            container. The heading does, so it lines up with the sections around
+            it. */}
         <section className="relative bg-paper py-24 lg:py-32">
           <SectionCurve fill="text-paper" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <div className="mb-14 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
-                <div>
-                  <p className="eyebrow mb-6 text-accent-ink">Projects</p>
-                  <SplitText
-                    as="h2"
-                    text="Selected work"
-                    className="display-wide"
-                    style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
-                  />
-                </div>
-                <p className="max-w-xl text-base leading-[1.85] text-muted-foreground lg:pt-3">
-                  A few of our residential projects. The projects page has
-                  the full set, with more photos of each.
-                </p>
+              <div className="mb-14 lg:mb-16">
+                <p className="eyebrow mb-6 text-accent-ink">Projects</p>
+                <SplitText
+                  as="h2"
+                  text="Architectural narratives"
+                  className="display-wide"
+                  style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
+                />
               </div>
             </Reveal>
-
-            {/* Four across, so the cards sit at the same scale as the interiors
-                strip below. That section zigzags; this one steps down instead,
-                so the two read as different compositions rather than one
-                repeated twice. */}
-            <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-              {PROJECTS.map((p, i) => (
-                <Reveal key={p.slug} delay={i * 0.07}>
-                  <Link href="/projects" className={`group block ${PROJECT_STEP[i]}`}>
-                    <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[1.25rem] bg-background">
-                      <RevealImage
-                        src={p.image}
-                        alt={p.title}
-                        sizes="(max-width: 1024px) 50vw, 25vw"
-                        className="absolute inset-0"
-                        imageClassName="transition-transform duration-[1.2s] ease-out group-hover:scale-[1.05]"
-                      />
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent p-5 pt-14">
-                        {/* The discipline list cannot fit a half-width phone
-                            card without being clipped, and a pill that wraps to
-                            three lines looks worse than none. The title carries
-                            it there. */}
-                        <Badge
-                          variant="light"
-                          className="mb-2.5 hidden text-[9px] tracking-[0.12em] sm:inline-flex"
-                        >
-                          {p.type}
-                        </Badge>
-                        <h3 className="font-display text-base leading-snug text-white">
-                          {p.title}
-                        </h3>
-                      </div>
-                    </div>
-                  </Link>
-                </Reveal>
-              ))}
-
-              {/* Only three projects have case studies, so the fourth cell is
-                  the way through to the rest rather than a card that 404s. It
-                  also replaces the button that used to sit in the header. */}
-              <Reveal delay={0.21}>
-                <Link href="/projects" className="group block lg:mt-[4.5rem]">
-                  <div className="flex aspect-[4/5] w-full flex-col justify-between rounded-[1.25rem] border border-border bg-background p-5 transition-colors duration-500 group-hover:border-foreground/25">
-                    <span>
-                      <ArrowRight className="size-9 text-accent" aria-hidden="true" />
-                      <span className="mt-2 block text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                        Portfolio
-                      </span>
-                    </span>
-                    <span>
-                      <span className="block font-display text-base leading-snug">
-                        See all our projects
-                      </span>
-                      <span className="mt-3 inline-flex items-center gap-2 text-[12px] font-medium">
-                        All projects
-                        <ArrowRight className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
-                      </span>
-                    </span>
-                  </div>
-                </Link>
-              </Reveal>
-            </div>
           </div>
+          <SpatialShowcase />
         </section>
 
         {/* ── INTERIORS GALLERY ───────────────────────────────────── */}
@@ -293,20 +194,14 @@ export default function HomePage() {
           <SectionCurve fill="text-background" place="bottom" />
           <div className="mx-auto max-w-7xl px-6 lg:px-10">
             <Reveal>
-              <div className="mb-14 grid gap-8 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-20">
-                <div>
-                  <p className="eyebrow mb-6 text-accent-ink">Interior design</p>
-                  <SplitText
-                    as="h2"
-                    text="Interiors"
-                    className="display-wide"
-                    style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
-                  />
-                </div>
-                <p className="max-w-xl text-base leading-[1.85] text-muted-foreground lg:pt-3">
-                  A few of the interiors we have designed: living rooms,
-                  bedrooms, a study and a private cinema.
-                </p>
+              <div className="mb-14">
+                <p className="eyebrow mb-6 text-accent-ink">Interior design</p>
+                <SplitText
+                  as="h2"
+                  text="Spatial experiences"
+                  className="display-wide"
+                  style={{ fontSize: "clamp(1.6rem, 3.2vw, 2.6rem)" }}
+                />
               </div>
             </Reveal>
 
