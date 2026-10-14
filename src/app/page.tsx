@@ -240,10 +240,11 @@ export default function HomePage() {
             <Reveal>
               <p
                 className="max-w-3xl font-display leading-[1.2] text-white"
-                style={{ fontSize: "clamp(1.7rem, 3.8vw, 3.4rem)" }}
+                style={{ fontSize: "clamp(1.55rem, 3.1vw, 2.8rem)" }}
               >
-                We design it, build it and finish it. You deal with one team
-                from the first drawing to handover.
+                From the first line drawn to the final space lived in, we bring
+                ideas into existence with clarity of vision and care in every
+                detail.
               </p>
               <div className="mt-12">
                 <CTAButton
